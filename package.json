@@ -1,0 +1,13 @@
+{
+  "name": "roof-m-all-sample",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Conversion-first Roof-M-All sample homepage for Railway deployment.",
+  "scripts": {
+    "start": "serve -s . -l ${PORT:-3000}",
+    "dev": "serve -s . -l 3000"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}

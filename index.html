@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roof-M-All Sample Homepage — Conversion First</title>
+  <meta name="description" content="Sample conversion-first Roof-M-All homepage concept based on the $50M home service website playbook." />
+  <style>
+    :root{
+      --ink:#111111; --muted:#5f5f5f; --line:#e7e2da; --paper:#fffaf2; --white:#fff;
+      --red:#b91c1c; --red-dark:#7f1111; --gold:#f2b705; --charcoal:#181818; --soft:#f7efe4;
+      --green:#157347; --shadow:0 22px 60px rgba(22,18,14,.14); --radius:22px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif;color:var(--ink);background:var(--paper);line-height:1.5} a{color:inherit;text-decoration:none} img{max-width:100%;display:block}.wrap{width:min(1180px,calc(100% - 36px));margin:auto}.topbar{position:sticky;top:0;z-index:30;background:#101010;color:white;border-bottom:4px solid var(--gold);box-shadow:0 8px 28px rgba(0,0,0,.18)}.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.01em}.brand img{width:92px;height:auto;background:white;border-radius:8px;padding:3px}.nav{display:flex;align-items:center;gap:20px;font-weight:800;font-size:14px;text-transform:uppercase}.nav a{opacity:.9}.phone{display:flex;align-items:center;gap:10px;background:var(--red);padding:12px 16px;border-radius:999px;font-weight:950;color:#fff;box-shadow:0 10px 25px rgba(185,28,28,.32)}.mobile-call{display:none}.hero{position:relative;overflow:hidden;background:linear-gradient(110deg,rgba(0,0,0,.82),rgba(0,0,0,.55)),url('assets/hero.jpg') center/cover;min-height:760px;color:white}.hero:after{content:"";position:absolute;inset:auto 0 0 0;height:120px;background:linear-gradient(transparent,var(--paper))}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.04fr .76fr;gap:42px;align-items:center;padding:72px 0 120px}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:rgba(242,183,5,.16);border:1px solid rgba(242,183,5,.42);color:#ffe08a;padding:9px 13px;border-radius:999px;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}.hero h1{font-size:clamp(44px,6.6vw,86px);line-height:.94;margin:20px 0 18px;letter-spacing:-.055em;text-wrap:balance}.hero h1 span{color:var(--gold)}.sub{font-size:clamp(18px,2vw,23px);max-width:720px;color:#f5f0e8;margin:0 0 26px}.proof-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}.proof{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:14px 15px;backdrop-filter:blur(8px)}.proof b{display:block;font-size:22px;color:#fff}.proof span{font-size:13px;color:#ded8cf;font-weight:750}.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 20px;border-radius:999px;font-weight:950;border:0;cursor:pointer}.btn.primary{background:var(--red);color:#fff;box-shadow:0 18px 35px rgba(185,28,28,.34)}.btn.secondary{background:#fff;color:#111}.hero-note{font-size:13px;color:#d8d2c8;margin-top:13px}.estimate-card{background:#fff;color:#111;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border-top:7px solid var(--gold)}.estimate-card h2{font-size:28px;line-height:1.05;margin:0 0 8px;letter-spacing:-.03em}.estimate-card p{margin:0 0 16px;color:var(--muted)}.form{display:grid;gap:11px}.form input,.form select,.form textarea{width:100%;border:1px solid #ddd3c5;border-radius:12px;padding:13px 14px;font:inherit;background:#fff;color:#111}.form textarea{min-height:86px;resize:vertical}.form .btn{width:100%;border-radius:13px}.micro{font-size:12px;color:#777}.section{padding:78px 0}.section.white{background:#fff}.section.charcoal{background:#151515;color:#fff}.split{display:grid;grid-template-columns:.88fr 1.12fr;gap:46px;align-items:center}.kicker{color:var(--red);font-weight:950;text-transform:uppercase;letter-spacing:.08em;font-size:13px}.section h2{font-size:clamp(34px,4.8vw,58px);line-height:1.01;letter-spacing:-.045em;margin:10px 0 16px;text-wrap:balance}.section p.lead{font-size:20px;color:var(--muted);max-width:780px}.charcoal p.lead,.charcoal .muted{color:#cfc7bd}.media-card{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);background:#ddd;position:relative}.media-card .caption{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(0,0,0,.75);color:#fff;border-radius:16px;padding:14px 16px;font-weight:850}.logo-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}.badge{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;font-weight:950;box-shadow:0 12px 30px rgba(0,0,0,.05)}.badge small{display:block;color:var(--muted);font-weight:800;margin-top:4px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 16px 45px rgba(0,0,0,.06)}.charcoal .card{background:#222;border-color:#343434;color:#fff}.card img.icon{width:44px;height:44px;object-fit:contain;margin-bottom:14px}.card h3{font-size:23px;line-height:1.12;margin:0 0 10px;letter-spacing:-.02em}.card p{color:var(--muted);margin:0}.charcoal .card p{color:#c9c1b8}.service-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}.check{display:flex;gap:10px;align-items:flex-start;font-weight:850}.check:before{content:"✓";color:#fff;background:var(--green);border-radius:50%;width:22px;height:22px;display:inline-grid;place-items:center;flex:0 0 22px;font-size:14px}.quote-band{background:var(--red);color:white;border-radius:30px;padding:34px;display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;box-shadow:0 22px 55px rgba(185,28,28,.25)}.quote-band h2{font-size:38px;margin:0 0 6px}.quote-band p{margin:0;color:#ffe4e4}.quote-band .btn{background:#fff;color:var(--red)}.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.review{background:#fff;border-radius:22px;border:1px solid var(--line);padding:22px}.stars{color:var(--gold);font-size:20px;letter-spacing:1px}.review p{color:#3f3f3f}.review b{display:block;margin-top:14px}.faq{display:grid;gap:12px;margin-top:28px}.faq details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px}.faq summary{font-weight:950;cursor:pointer}.faq p{color:var(--muted)}.footer{background:#0f0f0f;color:#fff;padding:42px 0}.footer-grid{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}.sticky-bottom{display:none}.placeholder{border:2px dashed #d7c8b5;background:#fff8ed;color:#6a5540;border-radius:16px;padding:14px;font-size:13px;font-weight:800;margin-top:14px}.section-nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-weight:900;color:#333}@media(max-width:900px){.nav{display:none}.topbar .phone{display:none}.mobile-call{display:flex}.hero-grid,.split{grid-template-columns:1fr}.hero{min-height:auto}.hero-grid{padding:44px 0 96px}.proof-row,.cards,.reviews,.logo-strip{grid-template-columns:1fr}.quote-band{grid-template-columns:1fr}.service-list{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.sticky-bottom{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#111;padding:10px 14px;display:grid;grid-template-columns:1fr 1fr;gap:10px;box-shadow:0 -10px 30px rgba(0,0,0,.28)}.sticky-bottom .btn{min-height:48px;padding:0 10px;border-radius:12px}.brand img{width:76px}body{padding-bottom:76px}.section{padding:56px 0}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#top"><img src="assets/logo.jpg" alt="Roof-M-All logo"><span>Roof-M-All</span></a>
+      <nav class="nav" aria-label="Main navigation"><a href="#services">Services</a><a href="#proof">Proof</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a></nav>
+      <a class="phone" href="tel:7046319936">Call 704-631-9936</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Charlotte & surrounding NC/SC areas</span>
+          <h1>Top-Rated Roofing Help From The Team That <span>Roofs-M-All</span></h1>
+          <p class="sub">Roof repair, replacement, storm damage, gutters, shingles, metal, rubber roofing, and commercial roofing — handled by a licensed, insured, GAF Master Elite team.</p>
+          <div class="proof-row">
+            <div class="proof"><b>5,000+</b><span>roofs serviced across NC & SC</span></div>
+            <div class="proof"><b>GAF</b><span>Master Elite Installer</span></div>
+            <div class="proof"><b>1–2 weeks</b><span>typical install window stated on current site</span></div>
+          </div>
+          <div class="cta-row"><a class="btn primary" href="#estimate">Get My Free Roof Estimate</a><a class="btn secondary" href="tel:7046319936">Call Now</a></div>
+          <p class="hero-note">Sample concept only. Final version should use verified reviews, service areas, licenses, and tracking numbers.</p>
+        </div>
+        <aside class="estimate-card" id="estimate" aria-label="Free estimate form">
+          <h2>Schedule Your FREE Roof Inspection / Estimate</h2>
+          <p>Tell us what is going on. A Roof-M-All team member can follow up during business hours.</p>
+          <form class="form" onsubmit="event.preventDefault(); document.querySelector('#formStatus').textContent='Sample only — this form is ready to connect to HighLevel, Railway, email, or CRM.';">
+            <input aria-label="Name" placeholder="Name" required>
+            <input aria-label="Phone" placeholder="Phone" required>
+            <input aria-label="Email" placeholder="Email">
+            <input aria-label="Property ZIP or city" placeholder="Property ZIP / City">
+            <select aria-label="Service needed"><option>What do you need?</option><option>Roof replacement</option><option>Roof repair / leak</option><option>Storm or insurance claim</option><option>Commercial roofing</option><option>Gutters</option><option>Not sure yet</option></select>
+            <textarea aria-label="Project notes" placeholder="Briefly describe the issue"></textarea>
+            <button class="btn primary" type="submit">Request My Free Estimate</button>
+            <div class="micro" id="formStatus">No spam. No obligation. Fast local follow-up.</div>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section white" id="proof">
+      <div class="wrap split">
+        <div class="media-card"><img src="assets/roof-home.jpg" alt="Roof-M-All roofing project"><div class="caption">Real project imagery belongs above generic stock photography.</div></div>
+        <div>
+          <div class="kicker">Trust shown, not claimed</div>
+          <h2>Make the homeowner feel safe before they ever call.</h2>
+          <p class="lead">The playbook says the website should work like a 24/7 front desk: visible phone number, immediate estimate path, real proof, clear services, and repeated calls to action after each trust-building section.</p>
+          <div class="logo-strip">
+            <div class="badge">Licensed<small>verify details</small></div><div class="badge">Insured<small>verify details</small></div><div class="badge">GAF Master Elite<small>from current site</small></div><div class="badge">Local Reviews<small>proof block</small></div>
+          </div>
+          <div class="placeholder">Need from you later: final license number, owner/team photos, review source, service-area priority, warranty specifics, and insurance-claim language you approve.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="kicker">Roofing services</div>
+        <h2>Clear choices for what homeowners actually need.</h2>
+        <p class="lead">Instead of vague “solutions,” each service becomes a direct path to quote intent and SEO pages later.</p>
+        <div class="cards">
+          <article class="card"><img class="icon" src="assets/shingles.svg" alt=""><h3>Shingle Roofing</h3><p>Replacement and repair options for asphalt shingle roofs, with clean installation and job-site cleanup.</p></article>
+          <article class="card"><img class="icon" src="assets/metal.svg" alt=""><h3>Metal Roofing</h3><p>Durable roofing systems for homeowners who want long-term protection and a sharper exterior look.</p></article>
+          <article class="card"><img class="icon" src="assets/rubber.svg" alt=""><h3>Commercial & Rubber Roofing</h3><p>Flat/low-slope and commercial roofing help for businesses around Charlotte and surrounding areas.</p></article>
+        </div>
+        <div class="service-list">
+          <div class="check">Roof repair and leak response</div><div class="check">Storm damage and insurance coordination</div><div class="check">Roof replacement</div><div class="check">Gutters and related exterior work</div><div class="check">Residential roofing</div><div class="check">Commercial roofing</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section charcoal">
+      <div class="wrap split">
+        <div>
+          <div class="kicker" style="color:var(--gold)">What makes Roof-M-All stand out</div>
+          <h2>Built around proof, speed, and confidence.</h2>
+          <p class="lead">This section turns the existing claims into homeowner-facing reasons to trust the company.</p>
+        </div>
+        <div class="cards" style="grid-template-columns:1fr">
+          <article class="card"><h3>GAF Master Elite Installer</h3><p>Use the highest-quality materials and trained/certified installers — stated on the current Roof-M-All website.</p></article>
+          <article class="card"><h3>Insurance coordination</h3><p>Several existing reviews mention help coordinating with insurance companies after storms.</p></article>
+          <article class="card"><h3>Clean job-site experience</h3><p>Reviews repeatedly mention cleanup, communication, and completing the work as promised.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="reviews">
+      <div class="wrap">
+        <div class="kicker">Customer proof</div>
+        <h2>Reviews should do selling that copy can’t.</h2>
+        <p class="lead">These are draft excerpts based on review text visible on the current site. Final site should pull verified Google/Facebook/review-platform reviews if possible.</p>
+        <div class="reviews">
+          <article class="review"><div class="stars">★★★★★</div><p>“Roof-M-All did a great job start to finish replacing our roof… walked me through the process and assisted with coordination with my insurance company.”</p><b>Homeowner review excerpt</b></article>
+          <article class="review"><div class="stars">★★★★★</div><p>“Good quality service. Prompt. Delivered what was asked and was complete when they said it would be.”</p><b>Homeowner review excerpt</b></article>
+          <article class="review"><div class="stars">★★★★★</div><p>“Very professional… quality workers, kept the area clean, large crew works fast.”</p><b>Homeowner review excerpt</b></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap quote-band">
+        <div><h2>Need roofing? Call Roof-M-All.</h2><p>The next step should always be obvious: call now or request a free estimate.</p></div>
+        <a class="btn" href="#estimate">Get Free Estimate</a>
+      </div>
+    </section>
+
+    <section class="section white" id="seo">
+      <div class="wrap">
+        <div class="kicker">Next SEO buildout</div>
+        <h2>Service + location pages become the growth engine.</h2>
+        <p class="lead">Once the homepage conversion path is right, we create pages for what people search and where they search it.</p>
+        <div class="section-nav"><span class="pill">Roofing company in Charlotte, NC</span><span class="pill">Roof repair in Matthews, NC</span><span class="pill">Storm damage roof repair in Concord, NC</span><span class="pill">Roof replacement in Rock Hill, SC</span><span class="pill">Commercial roofing in Charlotte</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="kicker">FAQ</div>
+        <h2>Answer buying objections before the phone call.</h2>
+        <div class="faq">
+          <details open><summary>Do you offer free roof estimates?</summary><p>Draft: Yes — the primary CTA is a free roof inspection/estimate. Final copy should match Roof-M-All’s exact sales process.</p></details>
+          <details><summary>Do you help with storm damage and insurance claims?</summary><p>Draft: Reviews on the current site mention insurance coordination. Final wording should be approved before publishing.</p></details>
+          <details><summary>What areas do you serve?</summary><p>Draft: Charlotte and surrounding North Carolina / South Carolina areas. Final site should list priority towns/cities for SEO.</p></details>
+          <details><summary>What roofing materials do you install?</summary><p>Draft: Shingles, metal roofing, rubber roofing, commercial roofing, gutters, and more — based on the current site.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid"><div><img src="assets/logo.jpg" alt="Roof-M-All logo" style="width:110px;background:#fff;border-radius:8px;padding:4px;margin-bottom:12px"><strong>Roof-M-All sample homepage</strong><p class="muted">Conversion-first concept based on the $50M home-service website playbook.</p></div><a class="phone" href="tel:7046319936">704-631-9936</a></div>
+  </footer>
+  <div class="sticky-bottom"><a class="btn secondary" href="tel:7046319936">Call</a><a class="btn primary" href="#estimate">Free Estimate</a></div>
+</body>
+</html>
