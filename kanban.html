@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roof-M-All Growth Kanban Board</title>
+  <meta name="description" content="Interactive four-phase Roof-M-All growth deployment Kanban board with draggable cards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --dark:#11121a;
+      --dark-2:#171923;
+      --dark-3:#202331;
+      --ink:#101116;
+      --muted:#6f7280;
+      --soft:#f5f5f7;
+      --paper:#ffffff;
+      --line:#e6e7ec;
+      --blue-soft:#9bbcff;
+      --blue-mid:#5f8fe8;
+      --blue:#2878f1;
+      --blue-bright:#2f86ff;
+      --nav-bg:#0d1020;
+      --nav-line:#252a3d;
+      --cta:#2878f1;
+      --cta-hover:#1f69da;
+      --gold:#c8942a;
+      --green:#39d98a;
+      --radius:18px;
+      --shadow:0 28px 80px rgba(12,14,23,.22);
+      --max:1440px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;color:#fff;background:var(--dark);line-height:1.5;text-rendering:optimizeLegibility;min-height:100vh}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    button,input,textarea{font:inherit}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .site-header{position:sticky;top:0;z-index:40;background:var(--nav-bg);backdrop-filter:blur(18px);border-bottom:1px solid var(--nav-line);box-shadow:0 18px 42px rgba(0,0,0,.26)}
+    .top-strip{background:linear-gradient(90deg,#8fb5ff 0%,var(--blue-bright) 48%,#126fe8 100%);color:#eef5ff;font-size:13px;font-weight:600;letter-spacing:.01em;border-bottom:1px solid rgba(255,255,255,.16)}
+    .top-strip .wrap{height:34px;display:flex;align-items:center;justify-content:center;gap:18px;text-align:center}.top-strip strong{color:#fff}.top-strip a{color:#fff;font-weight:800}
+    .nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:26px;background:var(--nav-bg)}
+    .brand{display:flex;align-items:center;color:#fff;font-weight:600;letter-spacing:.01em}.brand img{width:174px;background:transparent;border-radius:0;padding:0}
+    .links{display:flex;align-items:center;gap:26px;color:#d8d9df;font-size:14px;font-weight:600}.links a{transition:.18s ease;color:#d8d9df}.links a:hover,.links a.active{color:#fff}
+    .header-actions{display:flex;align-items:center;gap:12px}.phone-link{color:#fff;font-weight:600;font-size:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 18px;border-radius:12px;font-weight:600;border:1px solid transparent;cursor:pointer;transition:.18s ease;white-space:nowrap}.btn-primary{background:var(--cta);color:#fff;box-shadow:0 16px 34px rgba(36,102,210,.34)}.btn-primary:hover{background:var(--cta-hover);transform:translateY(-1px)}.btn-ghost{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.18)}.btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 78% 18%,rgba(47,134,255,.32),transparent 34%),radial-gradient(circle at 16% 24%,rgba(155,188,255,.16),transparent 28%),linear-gradient(135deg,#10121d 0%,#151928 52%,#0d1020 100%);border-bottom:1px solid rgba(255,255,255,.08)}
+    .hero:before{content:"";position:absolute;inset:auto -12% -55% -12%;height:420px;background:radial-gradient(circle,rgba(47,134,255,.18),transparent 62%);filter:blur(8px)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:44px;align-items:end;padding:74px 0 46px}
+    .eyebrow{color:var(--blue-soft);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;margin-bottom:12px}.hero h1{font-size:clamp(42px,5.6vw,76px);line-height:1.02;margin:0 0 18px;letter-spacing:-.045em;font-weight:700;text-wrap:balance}.hero p{font-size:clamp(17px,2vw,21px);color:#d7dbea;max-width:820px;margin:0}.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(155,188,255,.22);border-radius:24px;padding:22px;box-shadow:0 28px 70px rgba(0,0,0,.25);backdrop-filter:blur(12px)}.hero-card strong{display:block;font-size:34px;line-height:1;color:var(--blue-soft);margin-bottom:8px}.hero-card span{color:#c7ccdd;font-weight:600}
+
+    .board-shell{position:relative;padding:34px 0 70px;background:linear-gradient(180deg,#11121a 0%,#f5f5f7 21%,#f5f5f7 100%);color:var(--ink)}
+    .toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:0 0 20px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 16px 45px rgba(18,20,31,.08)}
+    .toolbar h2{margin:0;font-size:20px;letter-spacing:-.02em}.toolbar p{margin:3px 0 0;color:var(--muted);font-size:14px}.toolbar-actions{display:flex;gap:10px;flex-wrap:wrap}.btn-small{min-height:42px;padding:0 14px;border-radius:10px;font-size:14px}.btn-dark{background:var(--dark);color:#fff}.btn-light{background:#fff;color:#151722;border-color:var(--line)}
+    .board{display:grid;grid-template-columns:repeat(4,minmax(280px,1fr));gap:18px;align-items:start;overflow-x:auto;padding-bottom:14px;scroll-snap-type:x proximity}.lane{scroll-snap-align:start;background:rgba(255,255,255,.82);border:1px solid rgba(230,231,236,.92);border-radius:24px;box-shadow:0 18px 50px rgba(18,20,31,.09);overflow:hidden;min-height:620px}.lane-header{background:linear-gradient(135deg,#0f1a2b,#0d1020);color:#fff;padding:18px;border-bottom:4px solid var(--blue)}.lane:nth-child(1) .lane-header{border-color:#c8942a}.lane:nth-child(2) .lane-header{border-color:#2f86ff}.lane:nth-child(3) .lane-header{border-color:#39d98a}.lane:nth-child(4) .lane-header{border-color:#9bbcff}.phase-label{display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--gold);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.13em;margin-bottom:10px}.phase-window{color:#cbd3e6;font-size:12px;font-weight:700;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:5px 9px;text-transform:none;letter-spacing:0}.lane h3{font-size:22px;line-height:1.1;margin:0 0 9px;letter-spacing:-.025em}.lane-intro{margin:0;color:#cbd0df;font-size:13px}.lane-count{display:inline-flex;margin-top:13px;color:#fff;background:rgba(47,134,255,.18);border:1px solid rgba(155,188,255,.24);border-radius:999px;padding:6px 10px;font-size:12px;font-weight:700}
+    .dropzone{display:grid;gap:12px;min-height:430px;padding:14px;transition:.18s ease}.dropzone.drag-over{background:rgba(47,134,255,.09);box-shadow:inset 0 0 0 2px rgba(47,134,255,.22)}
+    .task-card{background:#fff;border:1px solid #e2e5ee;border-radius:18px;padding:15px 14px 13px;box-shadow:0 14px 32px rgba(18,20,31,.08);cursor:grab;transition:box-shadow .18s ease,transform .18s ease,border-color .18s ease;position:relative}.task-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(18,20,31,.12);border-color:rgba(47,134,255,.32)}.task-card.dragging{opacity:.55;transform:rotate(1.5deg);cursor:grabbing}.task-top{display:flex;align-items:flex-start;gap:10px}.drag-handle{color:var(--blue);font-weight:800;letter-spacing:-.12em;line-height:1.25;user-select:none}.task-title{flex:1;outline:none;font-size:14px;font-weight:600;line-height:1.42;color:#1b1d28;min-height:38px}.task-title:focus{background:#f1f6ff;box-shadow:0 0 0 4px #f1f6ff;border-radius:8px}.task-actions{display:flex;align-items:center;gap:6px;margin-top:12px}.card-btn{border:1px solid #e1e5ef;background:#f8f9fc;color:#474d5f;border-radius:9px;min-height:32px;padding:0 9px;font-size:12px;font-weight:700;cursor:pointer}.card-btn:hover{background:#eef4ff;color:var(--blue);border-color:#cddbf7}.delete-btn:hover{background:#fff1f1;color:#b42025;border-color:#ffd0d0}.add-card{margin:0 14px 16px;width:calc(100% - 28px);border:1px dashed rgba(47,134,255,.42);background:#f7faff;color:var(--blue);border-radius:14px;min-height:44px;font-weight:800;cursor:pointer}.add-card:hover{background:#eef5ff}.empty-hint{display:none;text-align:center;color:#8a90a0;border:1px dashed #d6dbe7;border-radius:16px;padding:18px;font-size:13px}.dropzone:empty + .empty-hint{display:block}
+    .source-note{margin-top:18px;color:#676d7e;font-size:13px}.source-note strong{color:#202331}.mobile-help{display:none;margin-top:10px;color:#cbd0df;font-size:13px}
+    .footer{background:#0d1020;color:#fff;padding:32px 0;border-top:1px solid rgba(255,255,255,.08)}.footer-grid{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer img{width:190px;background:transparent;border-radius:0;padding:0;margin-bottom:12px}.footer p{color:#aaaeba;margin:8px 0 0}
+
+    @media(max-width:1180px){.board{grid-template-columns:repeat(4,310px)}.hero-grid{grid-template-columns:1fr}.hero-card{max-width:520px}.lane{min-height:560px}}
+    @media(max-width:980px){.links{display:none}.phone-link{display:none}.hero-grid{padding:48px 0 38px}.hero h1{font-size:48px}.board-shell{padding-top:24px}.mobile-help{display:block}}
+    @media(max-width:640px){.wrap{width:min(var(--max),calc(100% - 28px))}.top-strip{font-size:12px}.top-strip .wrap{height:auto;min-height:32px;gap:10px;flex-wrap:wrap;padding:6px 0}.nav{height:68px}.brand img{width:142px}.header-actions .btn{display:none}.hero h1{font-size:42px}.hero-card strong{font-size:28px}.toolbar{align-items:flex-start}.toolbar-actions{width:100%}.toolbar-actions .btn{flex:1}.board{grid-template-columns:repeat(4,286px);gap:14px}.lane{min-height:520px}.footer-grid{display:grid}.btn-primary{box-shadow:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-strip"><div class="wrap"><span><strong>N.C. General Contractor License # L.75560</strong></span><a href="tel:7046319936">☎ 704-631-9936</a></div></div>
+    <div class="wrap nav">
+      <a class="brand" href="index.html"><img src="assets/logo.png" alt="Roof-M-All logo"></a>
+      <nav class="links" aria-label="Main navigation"><a href="index.html#services">Services</a><a href="index.html#standards">Standards</a><a href="index.html#reviews">Reviews</a><a class="active" href="kanban.html">Growth Board</a></nav>
+      <div class="header-actions"><a class="phone-link" href="tel:7046319936">704-631-9936</a><a class="btn btn-primary" href="index.html#estimate">Schedule Free Estimate</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Roof-M-All growth Kanban board hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Deployment plan · interactive board</div>
+          <h1>Roof-M-All four-phase growth Kanban.</h1>
+          <p>Drag cards between swim lanes, add new tasks, rename cards in place, and delete anything that does not belong. The board saves changes in this browser so we can keep sorting the plan as the strategy sharpens.</p>
+          <div class="mobile-help">Tip: on mobile, scroll sideways to see all four phase lanes.</div>
+        </div>
+        <aside class="hero-card">
+          <strong>4 phases</strong>
+          <span>From stopping revenue leaks to compounding market position.</span>
+        </aside>
+      </div>
+    </section>
+
+    <section class="board-shell" aria-label="Four phase Kanban board">
+      <div class="wrap">
+        <div class="toolbar">
+          <div><h2>Growth deployment board</h2><p>Drag cards lane-to-lane. Use Edit to rename, Add Card to create a new task, and Delete to remove one.</p></div>
+          <div class="toolbar-actions"><button class="btn btn-small btn-dark" type="button" data-add-global>+ Add Task</button><button class="btn btn-small btn-light" type="button" data-reset>Reset PDF Plan</button></div>
+        </div>
+
+        <div class="board" data-board></div>
+        <p class="source-note"><strong>Source:</strong> cards are populated from the uploaded “roof-m-all-4-phases.pdf” deployment plan. Your edits are stored locally in this browser.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid"><div><img src="assets/logo.png" alt="Roof-M-All logo"><strong>Roof-M-All growth board</strong><p>Same dark premium UI system, now with a working draggable planning board.</p></div><a class="btn btn-primary" href="index.html">Back to Homepage</a></div>
+  </footer>
+
+  <script>
+    const STORAGE_KEY = 'roofMallGrowthKanban.v1';
+    const defaultBoard = [
+      {
+        id:'phase-1',
+        label:'Phase 1',
+        title:'Stop the Revenue Leaks',
+        window:'Weeks 1–2',
+        intro:'Find the holes before buying more demand.',
+        cards:[
+          {id:'p1-1', title:'Audit lead sources, CAC, conversion flow, and conversion rates'},
+          {id:'p1-2', title:'Audit Google Business Profile, website, AI chat needs, review base, and current social presence'},
+          {id:'p1-3', title:'Identify missed-call, follow-up, and trust leaks already costing revenue'}
+        ]
+      },
+      {
+        id:'phase-2',
+        label:'Phase 2',
+        title:'Build the Revenue Infrastructure',
+        window:'Months 1–2',
+        intro:'Install the core systems that capture and convert demand.',
+        cards:[
+          {id:'p2-1', title:'Set up Google Workspace, tracking infrastructure, CRM/database visibility, and core business automations'},
+          {id:'p2-2', title:'Build or upgrade the website with AI chat, strengthen Google Business Profile, and install review generation'},
+          {id:'p2-3', title:'Create the 5x7 sales flip book and launch re-engagement to past customers and leads'}
+        ]
+      },
+      {
+        id:'phase-3',
+        label:'Phase 3',
+        title:'Turn On Scalable Demand',
+        window:'Months 2–4',
+        intro:'Launch demand, automate response, and scale what proves out.',
+        cards:[
+          {id:'p3-1', title:'Deploy Voice, Chat, Email AI for intake, missed-call capture, and after-hours response'},
+          {id:'p3-2', title:'Launch Google LSA and Google Search on high-intent commercial keywords'},
+          {id:'p3-3', title:'Research & deploy business/AI automations for scheduling and routing'},
+          {id:'p3-4', title:'Run 60–90 days, kill non-performers, scale winners'}
+        ]
+      },
+      {
+        id:'phase-4',
+        label:'Phase 4',
+        title:'Compound Market Position',
+        window:'Months 4+',
+        intro:'Turn winners into durable market position and long-term assets.',
+        cards:[
+          {id:'p4-1', title:'Once ROAS ≥ 3:1 and CAC payback ≤ 9 months, scale aggressively into what is already winning'},
+          {id:'p4-2', title:'Launch short-form social proof videos around jobs, crews, before/after, and trust'},
+          {id:'p4-3', title:'Build long-term assets in parallel: SEO/GEO, content, branded fleet, and deeper automations'}
+        ]
+      }
+    ];
+
+    let board = loadBoard();
+    let draggedCardId = null;
+
+    function cloneDefault(){ return JSON.parse(JSON.stringify(defaultBoard)); }
+    function loadBoard(){
+      try{
+        const saved = localStorage.getItem(STORAGE_KEY);
+        return saved ? JSON.parse(saved) : cloneDefault();
+      }catch(error){ return cloneDefault(); }
+    }
+    function saveBoard(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(board)); }
+    function makeId(){ return 'card-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2,7); }
+    function findCard(cardId){
+      for(const lane of board){
+        const index = lane.cards.findIndex(card => card.id === cardId);
+        if(index > -1) return {lane, index, card:lane.cards[index]};
+      }
+      return null;
+    }
+    function moveCard(cardId, targetLaneId, beforeCardId=null){
+      const found = findCard(cardId);
+      if(!found) return;
+      const [card] = found.lane.cards.splice(found.index, 1);
+      const targetLane = board.find(lane => lane.id === targetLaneId);
+      if(!targetLane) return;
+      let targetIndex = beforeCardId ? targetLane.cards.findIndex(item => item.id === beforeCardId) : targetLane.cards.length;
+      if(targetIndex < 0) targetIndex = targetLane.cards.length;
+      targetLane.cards.splice(targetIndex, 0, card);
+      saveBoard();
+      renderBoard();
+    }
+    function addCard(laneId){
+      const lane = board.find(item => item.id === laneId) || board[0];
+      const title = prompt('New task/card name:');
+      if(!title || !title.trim()) return;
+      lane.cards.push({id:makeId(), title:title.trim()});
+      saveBoard();
+      renderBoard();
+    }
+    function renameCard(cardId){
+      const found = findCard(cardId);
+      if(!found) return;
+      const title = prompt('Rename task/card:', found.card.title);
+      if(!title || !title.trim()) return;
+      found.card.title = title.trim();
+      saveBoard();
+      renderBoard();
+    }
+    function deleteCard(cardId){
+      const found = findCard(cardId);
+      if(!found) return;
+      if(!confirm('Delete this task/card?')) return;
+      found.lane.cards.splice(found.index, 1);
+      saveBoard();
+      renderBoard();
+    }
+    function saveInlineTitle(cardId, text){
+      const found = findCard(cardId);
+      if(!found) return;
+      const cleaned = text.replace(/\s+/g, ' ').trim();
+      if(cleaned) found.card.title = cleaned;
+      saveBoard();
+    }
+    function renderBoard(){
+      const boardEl = document.querySelector('[data-board]');
+      boardEl.innerHTML = '';
+      for(const lane of board){
+        const laneEl = document.createElement('section');
+        laneEl.className = 'lane';
+        laneEl.dataset.laneId = lane.id;
+        laneEl.innerHTML = `
+          <div class="lane-header">
+            <div class="phase-label"><span>${lane.label}</span><span class="phase-window">${lane.window}</span></div>
+            <h3>${lane.title}</h3>
+            <p class="lane-intro">${lane.intro}</p>
+            <span class="lane-count">${lane.cards.length} card${lane.cards.length === 1 ? '' : 's'}</span>
+          </div>
+          <div class="dropzone" data-dropzone="${lane.id}"></div>
+          <div class="empty-hint">Drop a task here or add a new one.</div>
+          <button class="add-card" type="button" data-add-card="${lane.id}">+ Add Card</button>
+        `;
+        const zone = laneEl.querySelector('.dropzone');
+        for(const card of lane.cards){
+          const cardEl = document.createElement('article');
+          cardEl.className = 'task-card';
+          cardEl.draggable = true;
+          cardEl.dataset.cardId = card.id;
+          cardEl.innerHTML = `
+            <div class="task-top"><span class="drag-handle" aria-hidden="true">⋮⋮</span><div class="task-title" contenteditable="true" spellcheck="true">${escapeHtml(card.title)}</div></div>
+            <div class="task-actions"><button class="card-btn" type="button" data-edit="${card.id}">Edit</button><button class="card-btn delete-btn" type="button" data-delete="${card.id}">Delete</button></div>
+          `;
+          zone.appendChild(cardEl);
+        }
+        boardEl.appendChild(laneEl);
+      }
+      wireBoardEvents();
+    }
+    function escapeHtml(value){
+      return value.replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+    }
+    function wireBoardEvents(){
+      document.querySelectorAll('.task-card').forEach(card => {
+        card.addEventListener('dragstart', event => {
+          draggedCardId = card.dataset.cardId;
+          card.classList.add('dragging');
+          event.dataTransfer.effectAllowed = 'move';
+          event.dataTransfer.setData('text/plain', draggedCardId);
+        });
+        card.addEventListener('dragend', () => {
+          draggedCardId = null;
+          card.classList.remove('dragging');
+          document.querySelectorAll('.dropzone').forEach(zone => zone.classList.remove('drag-over'));
+        });
+      });
+      document.querySelectorAll('.dropzone').forEach(zone => {
+        zone.addEventListener('dragover', event => {
+          event.preventDefault();
+          zone.classList.add('drag-over');
+          event.dataTransfer.dropEffect = 'move';
+        });
+        zone.addEventListener('dragleave', event => {
+          if(!zone.contains(event.relatedTarget)) zone.classList.remove('drag-over');
+        });
+        zone.addEventListener('drop', event => {
+          event.preventDefault();
+          zone.classList.remove('drag-over');
+          const cardId = event.dataTransfer.getData('text/plain') || draggedCardId;
+          if(!cardId) return;
+          const afterElement = getDropBeforeElement(zone, event.clientY);
+          moveCard(cardId, zone.dataset.dropzone, afterElement ? afterElement.dataset.cardId : null);
+        });
+      });
+      document.querySelectorAll('[data-add-card]').forEach(button => button.addEventListener('click', () => addCard(button.dataset.addCard)));
+      document.querySelectorAll('[data-edit]').forEach(button => button.addEventListener('click', () => renameCard(button.dataset.edit)));
+      document.querySelectorAll('[data-delete]').forEach(button => button.addEventListener('click', () => deleteCard(button.dataset.delete)));
+      document.querySelectorAll('.task-title').forEach(title => {
+        title.addEventListener('blur', () => saveInlineTitle(title.closest('.task-card').dataset.cardId, title.textContent));
+        title.addEventListener('keydown', event => {
+          if(event.key === 'Enter'){
+            event.preventDefault();
+            title.blur();
+          }
+        });
+      });
+    }
+    function getDropBeforeElement(container, y){
+      const cards = [...container.querySelectorAll('.task-card:not(.dragging)')];
+      return cards.reduce((closest, child) => {
+        const box = child.getBoundingClientRect();
+        const offset = y - box.top - box.height / 2;
+        if(offset < 0 && offset > closest.offset){ return {offset, element:child}; }
+        return closest;
+      }, {offset:Number.NEGATIVE_INFINITY}).element;
+    }
+    document.querySelector('[data-add-global]').addEventListener('click', () => addCard(board[0].id));
+    document.querySelector('[data-reset]').addEventListener('click', () => {
+      if(!confirm('Reset the board back to the PDF plan? This clears local board edits.')) return;
+      board = cloneDefault();
+      saveBoard();
+      renderBoard();
+    });
+    renderBoard();
+  </script>
+</body>
+</html>

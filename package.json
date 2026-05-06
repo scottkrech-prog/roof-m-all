@@ -4,8 +4,8 @@
   "private": true,
   "description": "Conversion-first Roof-M-All sample homepage for Railway deployment.",
   "scripts": {
-    "start": "serve -s . -l ${PORT:-3000}",
-    "dev": "serve -s . -l 3000"
+    "start": "serve . -l ${PORT:-3000}",
+    "dev": "serve . -l 3000"
   },
   "dependencies": {
     "serve": "^14.2.4"
