@@ -13,6 +13,9 @@ Conversion-first sample homepage for Roof-M-All, based on the $50M home-service 
 - Review excerpts
 - FAQ section
 - Railway-friendly `package.json` using `serve`
+- Interactive four-phase growth Kanban board in `kanban.html`
+- Phase 1–3 migration starter docs in `docs/`
+- CRM-ready lead form names, hidden attribution fields, and CTA tracking hooks
 
 ## Local preview
 
@@ -33,3 +36,8 @@ This is a sample concept, not production-final. Before launch, confirm:
 - warranty language
 - verified review sources
 - priority service areas and SEO pages
+
+## Migration planning docs
+
+- `docs/phase-1-3-migration.md` — starter execution plan for phases one through three.
+- `docs/lead-intake-schema.md` — first website-to-CRM field contract and routing notes.

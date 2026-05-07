@@ -66,7 +66,7 @@
     <div class="wrap nav">
       <a class="brand" href="#top"><img src="assets/logo.png" alt="Roof-M-All logo"></a>
       <nav class="links" aria-label="Main navigation"><a href="#services">Services</a><a href="#standards">Standards</a><a href="#reviews">Reviews</a><a href="#faq">FAQs</a><a href="kanban.html">Growth Board</a></nav>
-      <div class="header-actions"><a class="phone-link" href="tel:7046319936">704-631-9936</a><a class="btn btn-primary" href="#estimate">Schedule Free Estimate</a></div>
+      <div class="header-actions"><a class="phone-link" href="tel:7046319936" data-track-event="cta_call_click" data-track-location="header">704-631-9936</a><a class="btn btn-primary" href="#estimate" data-track-event="cta_estimate_click" data-track-location="header">Schedule Free Estimate</a></div>
     </div>
   </header>
 
@@ -80,7 +80,7 @@
           </div>
           <h1>Top-Rated Roofing Company in <span class="accent">Charlotte</span> & Surrounding Areas</h1>
           <p class="hero-copy">When you need roofing, call Roof-M-All. From repairs and storm damage to complete replacements, our team brings certified installation, clear communication, and premium materials to every roof.</p>
-          <div class="hero-ctas"><a class="btn btn-primary" href="#estimate">Schedule FREE Estimate</a><a class="btn btn-ghost" href="tel:7046319936">Call 704-631-9936</a></div>
+          <div class="hero-ctas"><a class="btn btn-primary" href="#estimate" data-track-event="cta_estimate_click" data-track-location="hero">Schedule FREE Estimate</a><a class="btn btn-ghost" href="tel:7046319936" data-track-event="cta_call_click" data-track-location="hero">Call 704-631-9936</a></div>
           <div class="hero-note"><span class="dot"></span><span>Built to convert: phone, proof, estimate form, and trust signals visible immediately.</span></div>
         </div>
 
@@ -88,13 +88,21 @@
           <div class="mini">Free roof inspection / estimate</div>
           <h2>Tell us what’s going on with your roof.</h2>
           <p>Fast local follow-up for repairs, replacement, storm damage, gutters, commercial roofing, and more.</p>
-          <form class="form" onsubmit="event.preventDefault();document.getElementById('form-status').textContent='Thanks — your request has been received. We’ll reach out to schedule your free roof inspection.';">
-            <div class="row"><input aria-label="First name" placeholder="Your name" required><input aria-label="Phone" placeholder="Best phone number" required></div>
-            <input aria-label="Email" placeholder="Email address (optional)">
-            <div class="row"><input aria-label="City or ZIP" placeholder="City or ZIP code"><select aria-label="Service needed"><option>Select service</option><option>Roof repair / leak</option><option>Roof replacement</option><option>Storm damage</option><option>Commercial roofing</option><option>Gutters</option></select></div>
-            <textarea aria-label="Project notes" placeholder="Tell us what’s going on with your roof"></textarea>
-            <button class="btn btn-primary" type="submit">Request My Free Estimate</button>
-            <div class="privacy" id="form-status">No obligation. No spam. We’ll follow up quickly.</div>
+          <form class="form" data-lead-form>
+            <div class="row"><input name="name" autocomplete="name" aria-label="First name" placeholder="Your name" required><input name="phone" autocomplete="tel" inputmode="tel" aria-label="Phone" placeholder="Best phone number" required></div>
+            <input name="email" autocomplete="email" inputmode="email" aria-label="Email" placeholder="Email address (optional)">
+            <div class="row"><input name="city_or_zip" autocomplete="postal-code" aria-label="City or ZIP" placeholder="City or ZIP code"><select name="service_needed" aria-label="Service needed"><option value="">Select service</option><option>Roof repair / leak</option><option>Roof replacement</option><option>Storm damage</option><option>Commercial roofing</option><option>Gutters</option></select></div>
+            <textarea name="project_notes" aria-label="Project notes" placeholder="Tell us what’s going on with your roof"></textarea>
+            <input type="hidden" name="lead_source" value="website">
+            <input type="hidden" name="page_url" data-attribution-field="page_url">
+            <input type="hidden" name="referrer" data-attribution-field="referrer">
+            <input type="hidden" name="utm_source" data-attribution-field="utm_source">
+            <input type="hidden" name="utm_medium" data-attribution-field="utm_medium">
+            <input type="hidden" name="utm_campaign" data-attribution-field="utm_campaign">
+            <input type="hidden" name="utm_term" data-attribution-field="utm_term">
+            <input type="hidden" name="utm_content" data-attribution-field="utm_content">
+            <button class="btn btn-primary" type="submit" data-track-event="lead_form_submit" data-track-location="hero_form">Request My Free Estimate</button>
+            <div class="privacy" id="form-status" role="status" aria-live="polite">No obligation. No spam. We’ll follow up quickly.</div>
           </form>
         </aside>
       </div>
@@ -128,9 +136,9 @@
       <div class="wrap">
         <div class="section-head"><div class="eyebrow">Our services</div><h2>Premier roofing services for homes & businesses.</h2><p class="lead">Clear service paths help homeowners self-identify their need and give us SEO targets for future location pages.</p></div>
         <div class="services-grid">
-          <article class="service-card"><img src="assets/shingles.svg" alt=""><h3>Shingle Roofing</h3><p>Repair and replacement for the most common residential roofing system in the Charlotte area.</p><a href="#estimate">Schedule estimate →</a></article>
-          <article class="service-card"><img src="assets/metal.svg" alt=""><h3>Metal Roofing</h3><p>Durable roofing options for homeowners who want long-lasting protection and a sharper exterior profile.</p><a href="#estimate">Explore metal roofing →</a></article>
-          <article class="service-card"><img src="assets/rubber.svg" alt=""><h3>Commercial & Rubber Roofing</h3><p>Flat/low-slope and commercial roofing support for businesses that need work done with less disruption.</p><a href="#estimate">Request commercial help →</a></article>
+          <article class="service-card"><img src="assets/shingles.svg" alt=""><h3>Shingle Roofing</h3><p>Repair and replacement for the most common residential roofing system in the Charlotte area.</p><a href="#estimate" data-track-event="service_card_click" data-track-service="shingle_roofing">Schedule estimate →</a></article>
+          <article class="service-card"><img src="assets/metal.svg" alt=""><h3>Metal Roofing</h3><p>Durable roofing options for homeowners who want long-lasting protection and a sharper exterior profile.</p><a href="#estimate" data-track-event="service_card_click" data-track-service="metal_roofing">Explore metal roofing →</a></article>
+          <article class="service-card"><img src="assets/rubber.svg" alt=""><h3>Commercial & Rubber Roofing</h3><p>Flat/low-slope and commercial roofing support for businesses that need work done with less disruption.</p><a href="#estimate" data-track-event="service_card_click" data-track-service="commercial_roofing">Request commercial help →</a></article>
         </div>
       </div>
     </section>
@@ -246,7 +254,7 @@
     </section>
 
     <section class="section">
-      <div class="wrap quote-strip"><div><h2>Ready for a roof inspection?</h2><p>Make the next action obvious: call now or schedule a free estimate.</p></div><a class="btn btn-primary" href="#estimate">Schedule FREE Estimate</a></div>
+      <div class="wrap quote-strip"><div><h2>Ready for a roof inspection?</h2><p>Make the next action obvious: call now or schedule a free estimate.</p></div><a class="btn btn-primary" href="#estimate" data-track-event="cta_estimate_click" data-track-location="quote_strip">Schedule FREE Estimate</a></div>
     </section>
 
     <section class="section section-muted" id="faq">
@@ -263,10 +271,10 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap footer-grid"><div><img src="assets/logo.png" alt="Roof-M-All logo"><strong>Roof-M-All roofing website</strong><p style="color:#aaaeba;margin:8px 0 0">Dark charcoal, white, soft gray, and Roof-M-All blue action accents.</p></div><a class="btn btn-primary" href="tel:7046319936">Call 704-631-9936</a></div>
+    <div class="wrap footer-grid"><div><img src="assets/logo.png" alt="Roof-M-All logo"><strong>Roof-M-All roofing website</strong><p style="color:#aaaeba;margin:8px 0 0">Dark charcoal, white, soft gray, and Roof-M-All blue action accents.</p></div><a class="btn btn-primary" href="tel:7046319936" data-track-event="cta_call_click" data-track-location="footer">Call 704-631-9936</a></div>
   </footer>
 
-  <div class="mobile-bar"><a class="btn btn-light" href="tel:7046319936">Call</a><a class="btn btn-primary" href="#estimate">Free Estimate</a></div>
+  <div class="mobile-bar"><a class="btn btn-light" href="tel:7046319936" data-track-event="mobile_bar_click" data-track-location="mobile_bar_call">Call</a><a class="btn btn-primary" href="#estimate" data-track-event="mobile_bar_click" data-track-location="mobile_bar_estimate">Free Estimate</a></div>
 
   <script>
     (function(){
@@ -294,6 +302,56 @@
       next.addEventListener('click', () => { index += visibleCount(); update(); });
       window.addEventListener('resize', update);
       update();
+    })();
+
+    (function(){
+      const attributionKeys = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+      const params = new URLSearchParams(window.location.search);
+      const saved = JSON.parse(localStorage.getItem('roofMallAttribution.v1') || '{}');
+      const attribution = {
+        page_url: window.location.href,
+        referrer: document.referrer || saved.referrer || ''
+      };
+      attributionKeys.forEach(key => {
+        attribution[key] = params.get(key) || saved[key] || '';
+      });
+      localStorage.setItem('roofMallAttribution.v1', JSON.stringify(attribution));
+      document.querySelectorAll('[data-attribution-field]').forEach(field => {
+        field.value = attribution[field.dataset.attributionField] || '';
+      });
+
+      window.roofMallTrack = function(eventName, payload = {}){
+        const eventPayload = {event:eventName, ...payload};
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(eventPayload);
+        if(window.gtag) window.gtag('event', eventName, payload);
+        return eventPayload;
+      };
+
+      document.querySelectorAll('[data-track-event]').forEach(element => {
+        element.addEventListener('click', () => {
+          window.roofMallTrack(element.dataset.trackEvent, {
+            location: element.dataset.trackLocation || '',
+            service: element.dataset.trackService || '',
+            href: element.getAttribute('href') || ''
+          });
+        });
+      });
+
+      const form = document.querySelector('[data-lead-form]');
+      if(!form) return;
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        document.querySelectorAll('[data-attribution-field]').forEach(field => {
+          field.value = attribution[field.dataset.attributionField] || '';
+        });
+        const lead = Object.fromEntries(new FormData(form).entries());
+        lead.submitted_at = new Date().toISOString();
+        window.roofMallTrack('lead_form_submit', lead);
+        localStorage.setItem('roofMallLastLead.v1', JSON.stringify(lead));
+        document.getElementById('form-status').textContent = 'Thanks — your request has been received. We’ll reach out to schedule your free roof inspection.';
+        form.reset();
+      });
     })();
   </script>
 </body>
