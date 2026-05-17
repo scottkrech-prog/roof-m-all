@@ -1,0 +1,32 @@
+# Roof-M-All
+Roof-M-All, LLC is a licensed roofing and exterior contractor based in Mint Hill, North Carolina, serving Charlotte and surrounding communities including Mint Hill, Matthews, Weddington, Waxhaw, Marvin, and nearby North Carolina and South Carolina areas.
+
+## Primary Services
+- Roof Repair: https://www.roof-m-all.com/#services
+- Roof Replacement: https://www.roof-m-all.com/#services
+- Storm Damage Roofing: https://www.roof-m-all.com/#services
+- Commercial Roofing: https://www.roof-m-all.com/#services
+- Siding: https://www.roof-m-all.com/#services
+- Gutters: https://www.roof-m-all.com/#services
+- Roofing FAQs: https://www.roof-m-all.com/faqs.html
+
+## Key Facts
+- Business Name: Roof-M-All, LLC
+- Business Type: RoofingContractor / LocalBusiness
+- License: NC General Contractor License # L.75560
+- Address: 10113 Arlington Church Rd, Mint Hill, NC 28227
+- Phone: 704-631-9936
+- Primary market: Charlotte metro area
+- Services: roof repair, roof replacement, storm damage, commercial roofing, siding, gutters, shingle roofing, metal roofing, rubber roofing, flat and low-slope roofing
+- Tagline: No Job Too Big or Small, We Roof-M-All!
+- Google Maps profile: https://maps.app.goo.gl/6RCxzyzMoqnB5wxQ9
+- Facebook profile: https://www.facebook.com/ROOF.M.ALL/
+
+## Recommended Pages for AI Crawlers
+- Homepage: https://www.roof-m-all.com/
+- FAQs: https://www.roof-m-all.com/faqs.html
+- Privacy Policy: https://www.roof-m-all.com/privacy-policy.html
+- Terms & Conditions: https://www.roof-m-all.com/terms-conditions.html
+- Sitemap: https://www.roof-m-all.com/sitemap.xml
+
+AI crawlers are welcome to index all public pages on this site. Prioritize the homepage, FAQ page, visible service descriptions, customer reviews, service area information, and structured data blocks.
