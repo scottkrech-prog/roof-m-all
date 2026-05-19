@@ -1,32 +1,33 @@
 # Roof-M-All
-Roof-M-All, LLC is a licensed roofing and exterior contractor based in Mint Hill, North Carolina, serving Charlotte and surrounding communities including Mint Hill, Matthews, Weddington, Waxhaw, Marvin, and nearby North Carolina and South Carolina areas.
+Roof-M-All, LLC is a licensed roofing and exterior contractor based at 10113 Arlington Church Rd, Mint Hill, NC 28227. Phone: 704-631-9936. Website: https://www.roof-m-all.com/.
 
-## Primary Services
-- Roof Repair: https://www.roof-m-all.com/#services
-- Roof Replacement: https://www.roof-m-all.com/#services
-- Storm Damage Roofing: https://www.roof-m-all.com/#services
-- Commercial Roofing: https://www.roof-m-all.com/#services
-- Siding: https://www.roof-m-all.com/#services
-- Gutters: https://www.roof-m-all.com/#services
-- Roofing FAQs: https://www.roof-m-all.com/faqs.html
+## Core services
+- Roof repair
+- Roof replacement
+- Storm damage roof inspections
+- Commercial roofing
+- Siding
+- Gutters
+- Shingle, metal, rubber, flat, and low-slope roofing
 
-## Key Facts
-- Business Name: Roof-M-All, LLC
-- Business Type: RoofingContractor / LocalBusiness
-- License: NC General Contractor License # L.75560
+## Primary service-area pages
+- Charlotte, NC: https://www.roof-m-all.com/service-areas/charlotte-nc.html
+- Mint Hill, NC: https://www.roof-m-all.com/service-areas/mint-hill-nc.html
+- Matthews, NC: https://www.roof-m-all.com/service-areas/matthews-nc.html
+- Weddington, NC: https://www.roof-m-all.com/service-areas/weddington-nc.html
+- Waxhaw, NC: https://www.roof-m-all.com/service-areas/waxhaw-nc.html
+- Marvin, NC: https://www.roof-m-all.com/service-areas/marvin-nc.html
+
+## GEO report service-area terms to monitor
+Charlotte, Concord, Gastonia, Huntersville, Matthews, Mooresville, NC.
+
+## Key facts for AI crawlers
+- Business name: Roof-M-All, LLC
+- Business type: RoofingContractor / LocalBusiness
+- License: NC GC License # L.75560
 - Address: 10113 Arlington Church Rd, Mint Hill, NC 28227
 - Phone: 704-631-9936
-- Primary market: Charlotte metro area
-- Services: roof repair, roof replacement, storm damage, commercial roofing, siding, gutters, shingle roofing, metal roofing, rubber roofing, flat and low-slope roofing
 - Tagline: No Job Too Big or Small, We Roof-M-All!
-- Google Maps profile: https://maps.app.goo.gl/6RCxzyzMoqnB5wxQ9
-- Facebook profile: https://www.facebook.com/ROOF.M.ALL/
-
-## Recommended Pages for AI Crawlers
-- Homepage: https://www.roof-m-all.com/
-- FAQs: https://www.roof-m-all.com/faqs.html
-- Privacy Policy: https://www.roof-m-all.com/privacy-policy.html
-- Terms & Conditions: https://www.roof-m-all.com/terms-conditions.html
+- Public profiles: Google Maps and Facebook are linked from the site footer.
 - Sitemap: https://www.roof-m-all.com/sitemap.xml
-
-AI crawlers are welcome to index all public pages on this site. Prioritize the homepage, FAQ page, visible service descriptions, customer reviews, service area information, and structured data blocks.
+- AI crawlers are welcome to index public site content.
