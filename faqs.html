@@ -261,6 +261,19 @@
 
     @media(max-width:640px){.hero-ctas{display:none}}
 
+    @media(max-width:640px){
+      .mobile-drawer .btn,
+      .mobile-drawer .btn-primary{display:flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:12px;background:var(--cta);color:#fff!important;box-shadow:0 16px 34px rgba(36,102,210,.34);font-weight:700;text-align:center}
+      .mobile-drawer .btn:hover,.mobile-drawer .btn-primary:hover{background:var(--cta-hover);color:#fff!important}
+      .hero h1,.area-hero h1,.faq-page-hero h1,.section h2,.area-card h2,.area-cta h2,.quote-strip h2,.estimate-card h2{max-width:100%;white-space:normal!important;overflow-wrap:normal;word-break:normal;text-wrap:wrap}
+      .section h2 span,.area-hero h1 span,.hero h1 span,.faq-page-hero h1 span{white-space:normal!important}
+      .section h2{font-size:clamp(30px,8.7vw,42px);line-height:1.08;letter-spacing:-.04em}
+      .section-head{text-align:left;max-width:100%}
+      .hero h1{font-size:clamp(38px,10.2vw,43px);line-height:1.05;letter-spacing:-.045em}
+      .area-hero h1,.faq-page-hero h1{font-size:clamp(36px,9.8vw,44px);line-height:1.06;letter-spacing:-.045em}
+      .lead,.section .lead,.area-hero p{max-width:100%;overflow-wrap:normal}
+    }
+
   </style>
 </head>
 <body>
