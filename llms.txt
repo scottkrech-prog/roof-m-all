@@ -30,4 +30,6 @@ Charlotte, Concord, Gastonia, Huntersville, Matthews, Mooresville, NC.
 - Tagline: No Job Too Big or Small, We Roof-M-All!
 - Public profiles: Google Maps and Facebook are linked from the site footer.
 - Sitemap: https://www.roof-m-all.com/sitemap.xml
+- Human-readable sitemap: https://www.roof-m-all.com/sitemap.html
+- Accessibility statement: https://www.roof-m-all.com/accessibility-statement.html
 - AI crawlers are welcome to index public site content.
