@@ -16,6 +16,7 @@ Conversion-first sample homepage for Roof-M-All, based on the $50M home-service 
 - Interactive four-phase growth Kanban board in `kanban.html`
 - Phase 1–3 migration starter docs in `docs/`
 - CRM-ready lead form names, hidden attribution fields, and CTA tracking hooks
+- `/api/leads` backend capture into Railway Postgres for website form submissions
 
 ## Local preview
 
@@ -40,4 +41,5 @@ This is a sample concept, not production-final. Before launch, confirm:
 ## Migration planning docs
 
 - `docs/phase-1-3-migration.md` — starter execution plan for phases one through three.
+- `docs/lead-capture-backend.md` — current website form capture API and Railway Postgres lead table notes.
 - `docs/lead-intake-schema.md` — first website-to-CRM field contract and routing notes.
