@@ -38,9 +38,6 @@ Charlotte, Concord, Gastonia, Huntersville, Matthews, Mooresville, NC.
 - GAF lists Roof-M-All as in business since 1955
 - GAF lists number of employees as more than 5
 - GAF listed State License Number: 75560
-- CertainTeed contractor profile: https://www.certainteed.ca/profiles/roof-m-all-llc
-- CertainTeed badge asset: https://www.roof-m-all.com/assets/certainteed-shinglemaster-credentialed.jpg
-- CertainTeed/ShingleMaster badge text: ShingleMaster™ Credentialed, CertainTeed Saint-Gobain
 - Public profiles: Google Maps, Facebook, and GAF contractor profile are linked/declared as official authority signals.
 - Project cost calculator covers exterior maintenance plan, new roof, metal roof, roof repair, gutters, and siding ballpark planning ranges.
 - Sitemap: https://www.roof-m-all.com/sitemap.xml
