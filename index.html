@@ -307,6 +307,7 @@
     .calculator-text-row{display:flex;justify-content:flex-start;align-items:center;width:100%;max-width:100%;margin-top:18px}
     .calculator-text-link{display:inline-flex;align-items:center;justify-content:center;max-width:min(100%,448px);padding:0;border:0;background:transparent;line-height:0;cursor:pointer}
     .calculator-highlight-img{display:block;width:100%;height:auto;filter:drop-shadow(0 8px 16px rgba(0,0,0,.14));transition:transform .18s ease,filter .18s ease}
+    .calculator-mobile-text{display:none}
     .calculator-text-link:hover .calculator-highlight-img{transform:translateY(-1px);filter:drop-shadow(0 10px 18px rgba(0,0,0,.18))}
 
     @media(max-width:640px){html,body{position:relative;overflow-x:hidden}.wrap{width:min(100% - 28px, var(--max));max-width:calc(100vw - 28px)}.site-header,.top-strip,.nav,.hero,.area-hero,main,.footer,.mobile-bar{width:100%;max-width:100vw;overflow-x:clip}.mega,.mobile-drawer,.gallery-lightbox{max-width:100vw}.hero h1,.area-hero h1{max-width:100%;overflow-wrap:break-word}}
@@ -324,7 +325,11 @@
       .hero h1{font-size:clamp(38px,10.2vw,43px);line-height:1.05;letter-spacing:-.045em}
       .hero-copy{font-size:clamp(22px,5.8vw,26px);line-height:1.13;margin-bottom:14px;max-width:100%;color:#eef2fb}
       .calculator-text-row{justify-content:flex-start;margin-top:0;margin-bottom:28px}
-      .calculator-text-link{width:100%;max-width:100%}
+      .calculator-text-link{display:inline;max-width:100%;width:auto;line-height:1.25;color:#fff;font:inherit;font-size:18px;font-weight:600;text-align:left}
+      .calculator-highlight-img{display:none}
+      .calculator-mobile-text{display:inline;color:#fff}
+      .calculator-mobile-underline{color:#fff;text-decoration:underline;text-decoration-color:#8fc7ff;text-decoration-thickness:1px;text-underline-offset:4px}
+      .calculator-text-link:hover .calculator-mobile-underline{text-decoration-color:#b9dcff}
       .hero .estimate-card{margin-top:0}
       .area-hero h1,.faq-page-hero h1{font-size:clamp(36px,9.8vw,44px);line-height:1.06;letter-spacing:-.045em}
       .lead,.section .lead,.area-hero p{max-width:100%;overflow-wrap:normal}
@@ -499,7 +504,7 @@
           <h1>Top-Rated Roofing &amp; Siding Company in <span class="accent">Charlotte</span> & Surrounding Areas</h1>
           <p class="hero-copy">Whether you need roofing, siding or gutters, for projects BIG or small—we Roof-M-All. From repairs to roof replacements, we bring GAF Master Elite installation & clear communication to every project. Fill the form or call for a FREE Estimate.</p>
           <div class="hero-ctas"><a class="btn btn-primary" href="#estimate" data-track-event="cta_estimate_click" data-track-location="hero">Schedule FREE Estimate</a><a class="btn btn-ghost" href="tel:7046319936" data-track-event="cta_call_click" data-track-location="hero">Call 704-631-9936</a></div>
-          <div class="calculator-text-row"><button class="calculator-text-link" type="button" data-cost-modal-open data-track-event="calculator_modal_open" data-track-location="hero_text_link" aria-label="Curious about cost? Try our project calculator here."><img class="calculator-highlight-img" src="assets/calculator-highlight-scott.jpg" alt="Curious about cost? Try our project calculator here." width="1280" height="98"></button></div>
+          <div class="calculator-text-row"><button class="calculator-text-link" type="button" data-cost-modal-open data-track-event="calculator_modal_open" data-track-location="hero_text_link" aria-label="Curious about cost? Try our project calculator here."><img class="calculator-highlight-img" src="assets/calculator-highlight-scott.jpg" alt="Curious about cost? Try our project calculator here." width="1280" height="98"><span class="calculator-mobile-text" aria-hidden="true">Curious about cost? <span class="calculator-mobile-underline">Try our project calculator here</span>.</span></button></div>
         </div>
 
         <aside class="estimate-card" id="estimate">
