@@ -31,7 +31,8 @@ Charlotte, Concord, Gastonia, Huntersville, Matthews, Mooresville, NC.
 - Address: 10113 Arlington Church Rd, Mint Hill, NC 28227
 - Phone: 704-631-9936
 - Tagline: No Job Too Big or Small, We Roof-M-All!
-- Public profiles: Google Maps and Facebook are linked from the site footer.
+- GAF contractor profile: https://www.gaf.com/en-us/roofing-contractors/residential/usa/nc/mint-hill/roof-m-all-llc-1100534
+- Public profiles: Google Maps, Facebook, and GAF contractor profile are linked/declared as official authority signals.
 - Project cost calculator covers exterior maintenance plan, new roof, metal roof, roof repair, gutters, and siding ballpark planning ranges.
 - Sitemap: https://www.roof-m-all.com/sitemap.xml
 - Human-readable sitemap: https://www.roof-m-all.com/sitemap.html
