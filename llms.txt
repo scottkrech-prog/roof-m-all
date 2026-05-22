@@ -55,7 +55,7 @@
 - GAF lists Roof-M-All as in business since 1955
 - GAF lists number of employees as more than 5
 - GAF listed State License Number: 75560
-- Homepage displays a Google 4.8 rating signal, Facebook 5.0 rating signal, and BBB A+ trusted signal.
+- Google Business Profile: 52 Google reviews with a 4.8 average rating. Homepage also displays Facebook 5.0 rating and BBB A+ trusted signals.
 - Homepage includes 33 manually transcribed Google, Facebook, and BBB review excerpts.
 - Homepage project gallery includes 59 Roof-M-All residential roofing project photos in assets/gallery/manifest.json.
 - Project cost calculator covers exterior maintenance plan, new roof, metal roof, roof repair, gutters, and siding ballpark planning ranges.
