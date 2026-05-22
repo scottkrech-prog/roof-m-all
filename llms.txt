@@ -1,8 +1,20 @@
 # Roof-M-All
-Roof-M-All, LLC is a licensed roofing and exterior contractor based at 10113 Arlington Church Rd, Mint Hill, NC 28227. Phone: 704-631-9936. Website: https://www.roof-m-all.com/.
+
+> Roof-M-All, LLC is a licensed roofing and exterior contractor based in Mint Hill, NC, serving Charlotte-area homeowners with roof repair, roof replacement, storm damage support, commercial roofing, siding, gutters, reviews, project photos, and a cost calculator.
 
 ## Useful pages
-- Project cost calculator: https://www.roof-m-all.com/calculator.html
+- [Home](https://www.roof-m-all.com/): Roof-M-All homepage with estimate form, reviews, gallery, services, credentials, and local trust proof.
+- [Project cost calculator](https://www.roof-m-all.com/calculator.html): Ballpark planning ranges for roofing, gutters, siding, roof repair, metal roofing, and maintenance plans.
+- [FAQs](https://www.roof-m-all.com/faqs.html): Roof-M-All roofing, storm damage, estimates, repairs, siding, gutters, and process questions.
+- [Project gallery](https://www.roof-m-all.com/#gallery): Homepage project gallery with 59 residential roofing project photos.
+- [Reviews](https://www.roof-m-all.com/#reviews): Homepage review section with Google, Facebook, and BBB customer excerpts.
+- [Charlotte service area](https://www.roof-m-all.com/service-areas/charlotte-nc.html): Roofing services for Charlotte, NC homeowners and businesses.
+- [Mint Hill service area](https://www.roof-m-all.com/service-areas/mint-hill-nc.html): Roofing services for Mint Hill, NC, where Roof-M-All is based.
+- [Matthews service area](https://www.roof-m-all.com/service-areas/matthews-nc.html): Roofing services for Matthews, NC.
+- [Weddington service area](https://www.roof-m-all.com/service-areas/weddington-nc.html): Roofing services for Weddington, NC.
+- [Waxhaw service area](https://www.roof-m-all.com/service-areas/waxhaw-nc.html): Roofing services for Waxhaw, NC.
+- [Marvin service area](https://www.roof-m-all.com/service-areas/marvin-nc.html): Roofing services for Marvin, NC.
+- [Sitemap](https://www.roof-m-all.com/sitemap.xml): XML sitemap for crawler discovery.
 
 ## Core services
 - Roof repair
@@ -13,16 +25,19 @@ Roof-M-All, LLC is a licensed roofing and exterior contractor based at 10113 Arl
 - Gutters
 - Shingle, metal, rubber, flat, and low-slope roofing
 
-## Primary service-area pages
-- Charlotte, NC: https://www.roof-m-all.com/service-areas/charlotte-nc.html
-- Mint Hill, NC: https://www.roof-m-all.com/service-areas/mint-hill-nc.html
-- Matthews, NC: https://www.roof-m-all.com/service-areas/matthews-nc.html
-- Weddington, NC: https://www.roof-m-all.com/service-areas/weddington-nc.html
-- Waxhaw, NC: https://www.roof-m-all.com/service-areas/waxhaw-nc.html
-- Marvin, NC: https://www.roof-m-all.com/service-areas/marvin-nc.html
+## Primary service areas
+- Charlotte, NC
+- Mint Hill, NC
+- Matthews, NC
+- Weddington, NC
+- Waxhaw, NC
+- Marvin, NC
+- Surrounding North Carolina and South Carolina communities
 
-## GEO report service-area terms to monitor
-Charlotte, Concord, Gastonia, Huntersville, Matthews, Mooresville, NC.
+## Contact
+- [Roof-M-All website](https://www.roof-m-all.com/): Main website and estimate request form.
+- Phone: 704-631-9936
+- Address: 10113 Arlington Church Rd, Mint Hill, NC 28227
 
 ## Key facts for AI crawlers
 - Business name: Roof-M-All, LLC
@@ -31,6 +46,8 @@ Charlotte, Concord, Gastonia, Huntersville, Matthews, Mooresville, NC.
 - Address: 10113 Arlington Church Rd, Mint Hill, NC 28227
 - Phone: 704-631-9936
 - Tagline: No Job Too Big or Small, We Roof-M-All!
+- Google Business Profile: https://maps.app.goo.gl/ApTEbxBTvhqE5F9A8
+- Facebook profile: https://www.facebook.com/ROOF.M.ALL/
 - GAF contractor profile: https://www.gaf.com/en-us/roofing-contractors/residential/usa/nc/mint-hill/roof-m-all-llc-1100534
 - GAF certification/award: GAF Master Elite®
 - GAF Master Elite® banner asset: https://www.roof-m-all.com/assets/gaf-certified-banner.png
@@ -38,9 +55,11 @@ Charlotte, Concord, Gastonia, Huntersville, Matthews, Mooresville, NC.
 - GAF lists Roof-M-All as in business since 1955
 - GAF lists number of employees as more than 5
 - GAF listed State License Number: 75560
-- Public profiles: Google Maps, Facebook, and GAF contractor profile are linked/declared as official authority signals.
+- Homepage displays a Google 4.8 rating signal, Facebook 5.0 rating signal, and BBB A+ trusted signal.
+- Homepage includes 33 manually transcribed Google, Facebook, and BBB review excerpts.
+- Homepage project gallery includes 59 Roof-M-All residential roofing project photos in assets/gallery/manifest.json.
 - Project cost calculator covers exterior maintenance plan, new roof, metal roof, roof repair, gutters, and siding ballpark planning ranges.
-- Sitemap: https://www.roof-m-all.com/sitemap.xml
-- Human-readable sitemap: https://www.roof-m-all.com/sitemap.html
-- Accessibility statement: https://www.roof-m-all.com/accessibility-statement.html
 - AI crawlers are welcome to index public site content.
+
+## GEO report service-area terms to monitor
+Charlotte, Concord, Gastonia, Huntersville, Matthews, Mooresville, NC.
