@@ -1,6 +1,9 @@
 # Roof-M-All
 Roof-M-All, LLC is a licensed roofing and exterior contractor based at 10113 Arlington Church Rd, Mint Hill, NC 28227. Phone: 704-631-9936. Website: https://www.roof-m-all.com/.
 
+## Useful pages
+- Project cost calculator: https://www.roof-m-all.com/calculator.html
+
 ## Core services
 - Roof repair
 - Roof replacement
@@ -29,6 +32,7 @@ Charlotte, Concord, Gastonia, Huntersville, Matthews, Mooresville, NC.
 - Phone: 704-631-9936
 - Tagline: No Job Too Big or Small, We Roof-M-All!
 - Public profiles: Google Maps and Facebook are linked from the site footer.
+- Project cost calculator covers exterior maintenance plan, new roof, metal roof, roof repair, gutters, and siding ballpark planning ranges.
 - Sitemap: https://www.roof-m-all.com/sitemap.xml
 - Human-readable sitemap: https://www.roof-m-all.com/sitemap.html
 - Accessibility statement: https://www.roof-m-all.com/accessibility-statement.html

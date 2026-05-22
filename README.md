@@ -12,6 +12,7 @@ Conversion-first sample homepage for Roof-M-All, based on the $50M home-service 
 - Services section
 - Review excerpts
 - FAQ section
+- Roofing/siding/gutter project cost calculator in `calculator.html`
 - Railway-friendly `package.json` using `serve`
 - Interactive four-phase growth Kanban board in `kanban.html`
 - Phase 1–3 migration starter docs in `docs/`
@@ -26,6 +27,18 @@ npm run dev
 ```
 
 Then open `http://localhost:3000`.
+
+## Shared menu/footer rule
+
+Any new public `.html` page should use the same `index.html` site header/menu and footer structure. Keep **Calculator** on the left side before **Services** in the desktop nav and near the top of the mobile drawer. The footer should match the index footer: company/license block, Services, Locations, map, copyright, and legal links.
+
+Root-level pages use root-relative paths like `calculator.html`; nested pages such as `service-areas/*.html` need `../` path prefixes.
+
+Before handing off a new page, run:
+
+```bash
+python3 scripts/verify-shared-menu.py
+```
 
 ## Notes
 
@@ -43,3 +56,4 @@ This is a sample concept, not production-final. Before launch, confirm:
 - `docs/phase-1-3-migration.md` — starter execution plan for phases one through three.
 - `docs/lead-capture-backend.md` — current website form capture API and Railway Postgres lead table notes.
 - `docs/lead-intake-schema.md` — first website-to-CRM field contract and routing notes.
+- `docs/chat-widget-knowledge-base.md` — approved draft knowledge base for a Roof-M-All website chat widget, including services, pricing guardrails, insurance scripts, lead-capture fields, and handoff rules.

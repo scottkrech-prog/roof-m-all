@@ -289,7 +289,7 @@
     .mega-promo .btn{background:linear-gradient(135deg,#22c0f1 0%,#1677f2 100%);color:#fff;border:1px solid rgba(255,255,255,.20);box-shadow:0 18px 38px rgba(4,18,34,.34)}
     .mega-promo .btn:hover{transform:translateY(-1px);box-shadow:0 22px 44px rgba(4,18,34,.42)}
 
-  
+
     .area-hero{background:linear-gradient(135deg,var(--dark),#17213a);color:#fff;padding:72px 0 58px;overflow:hidden;position:relative}.area-hero:after{content:"";position:absolute;width:360px;height:360px;border-radius:999px;background:rgba(36,102,210,.18);right:-120px;top:-140px}.area-hero .wrap{position:relative;z-index:1}.breadcrumbs{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#c8d8ff;margin-bottom:18px}.breadcrumbs a{color:#fff}.area-hero h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-.055em;margin:0 0 18px;max-width:930px}.area-hero p{font-size:20px;line-height:1.65;color:#d9deeb;max-width:850px;margin:0}.area-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px;max-width:920px}.area-proof div{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:17px 18px}.area-proof strong{display:block;color:#fff;font-size:20px}.area-proof span{display:block;color:#cbd2df;font-size:13px;font-weight:700;margin-top:4px}.area-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:34px;align-items:start}.area-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:0 18px 46px rgba(18,20,31,.08)}.area-card h2,.area-card h3{letter-spacing:-.03em}.area-card h2{font-size:34px;line-height:1.08;margin:0 0 14px}.area-card h3{font-size:24px;margin:0 0 12px}.area-card p,.area-card li{color:var(--muted);line-height:1.7}.area-card ul{padding-left:21px;margin:12px 0 0}.area-service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}.area-service{background:#f7f9fd;border:1px solid var(--line);border-radius:18px;padding:18px}.area-service strong{display:block;color:#171b25;margin-bottom:6px}.area-qa{display:grid;gap:14px}.area-qa details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 12px 32px rgba(18,20,31,.05)}.area-qa summary{cursor:pointer;font-weight:800;color:#151722}.area-qa p{color:var(--muted);line-height:1.7;margin:12px 0 0}.area-links{display:grid;gap:10px;margin-top:14px}.area-links a{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fff;color:#183153;font-weight:800}.area-links a:hover{border-color:rgba(36,102,210,.35);color:var(--blue)}.area-updated{font-size:13px;color:#717684;font-weight:700;margin-top:14px}.area-cta{background:linear-gradient(135deg,var(--dark),var(--dark-3));color:#fff;border-radius:32px;padding:34px;display:grid;gap:15px}.area-cta h2{font-size:34px;line-height:1.05;margin:0}.area-cta p{color:#ced0dc;margin:0}.area-cta .btn{width:max-content}@media(max-width:980px){.area-grid,.area-proof{grid-template-columns:1fr}.area-service-grid{grid-template-columns:1fr}}@media(max-width:640px){.area-hero{padding:48px 0 42px}.area-hero p{font-size:18px}.area-card{padding:22px}.area-cta{padding:26px}.area-proof div{padding:15px}}
 
     @media(max-width:640px){.hero-ctas{display:none}}
@@ -306,6 +306,32 @@
       .area-hero h1,.faq-page-hero h1{font-size:clamp(36px,9.8vw,44px);line-height:1.06;letter-spacing:-.045em}
       .lead,.section .lead,.area-hero p{max-width:100%;overflow-wrap:normal}
     }
+
+
+  /* Shared Roof-M-All footer */
+  .footer{background:#0d1020;color:#fff;padding:46px 0 24px;max-width:100vw;overflow-x:clip}
+  .footer .wrap{width:min(1180px,calc(100vw - 40px));max-width:100%;margin-inline:auto}
+  .footer-shell{display:grid;gap:30px}
+  .footer-main{display:grid;grid-template-columns:1.15fr .8fr .9fr 1.15fr;gap:28px;align-items:start}
+  .footer-license{color:#aaaeba;margin:0;font-size:14px;line-height:1.55}.footer-license strong{display:block;color:#fff;margin-bottom:2px}.footer-license a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+  .footer-heading{margin:0 0 12px;color:#fff;font-size:16px;text-transform:uppercase;letter-spacing:.08em}
+  .footer-list{display:grid;gap:8px;margin:0;padding:0;list-style:none}.footer-list a{color:#cbd0df;text-decoration:none}.footer-list a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+  .footer-map iframe{width:100%;min-height:190px;border:0;border-radius:18px;filter:grayscale(.15) contrast(1.05)}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#aeb4c4;font-size:13px}.footer-bottom p{margin:0;color:#aeb4c4}
+  .footer-legal{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.footer-legal a{color:#cbd0df;text-decoration:underline;text-underline-offset:3px}.footer-legal a:hover{color:#fff}.footer-legal span{color:#677086}
+  @media(max-width:980px){.footer-main{grid-template-columns:1fr 1fr}.footer-map{grid-column:1/-1}}
+  @media(max-width:640px){.footer{padding:36px 0 22px}.footer .wrap{width:min(100% - 28px,1180px);max-width:calc(100vw - 28px)}.footer-main{grid-template-columns:1fr}.footer-bottom{align-items:flex-start;flex-direction:column}.footer-map iframe{min-height:170px}}
+
+
+  /* Shared top license bar rendering */
+  body{padding-top:44px}
+  .top-strip{position:fixed;top:0;left:0;right:0;z-index:80;background:linear-gradient(90deg,#8fb5ff 0%,var(--blue-bright,#2f86ff) 48%,#126fe8 100%);color:#eef5ff;font-size:16px;font-weight:500;line-height:24px;letter-spacing:0;border-bottom:1px solid rgba(255,255,255,.16)}
+  .top-strip span,.top-strip strong,.top-strip a{font-size:inherit;line-height:inherit}
+  .top-strip .wrap{height:44px;gap:24px;display:flex;align-items:center;justify-content:center;text-align:center}
+  .top-strip strong{color:#fff;font-weight:800}
+  .top-strip a{color:#fff;font-weight:500;text-decoration:none}
+  @media(max-width:640px){body{padding-top:38px}.top-strip{font-size:13px}.top-strip .wrap{height:38px;gap:10px}}
+
 </style>
 </head>
 <body>
@@ -314,6 +340,7 @@
     <div class="wrap nav">
       <a class="brand" href="../index.html#top"><img src="../assets/logo.png" alt="Roof-M-All logo"></a>
       <nav class="links nav-menu" aria-label="Main navigation">
+        <a class="nav-link" href="../calculator.html" data-track-event="nav_calculator_click" data-track-location="desktop_nav">Calculator</a>
         <div class="nav-item" style="--notch:164px">
           <button class="nav-trigger" type="button">Services <span class="chev">▾</span></button>
           <div class="mega">
@@ -374,7 +401,7 @@
             <div class="mega-content">
               <h3 class="mega-heading">Charlotte Metro Service Areas</h3>
               <div class="location-grid">
-                <a href="charlotte-nc.html">Charlotte, NC</a><a href="mint-hill-nc.html">Mint Hill, NC</a><a href="matthews-nc.html">Matthews, NC</a><a href="weddington-nc.html">Weddington, NC</a><a href="waxhaw-nc.html">Waxhaw, NC</a><a href="marvin-nc.html">Marvin, NC</a>
+                <a href="../service-areas/charlotte-nc.html">Charlotte, NC</a><a href="../service-areas/mint-hill-nc.html">Mint Hill, NC</a><a href="../service-areas/matthews-nc.html">Matthews, NC</a><a href="../service-areas/weddington-nc.html">Weddington, NC</a><a href="../service-areas/waxhaw-nc.html">Waxhaw, NC</a><a href="../service-areas/marvin-nc.html">Marvin, NC</a>
               </div>
               <div class="mega-cta"><span>Serving homeowners across the Charlotte metro.</span><a href="../index.html#estimate">Check your address →</a></div>
             </div>
@@ -415,9 +442,10 @@
     </div>
     <div class="mobile-drawer" data-mobile-menu>
       <div class="wrap mobile-drawer-inner">
+        <a href="../calculator.html" data-track-event="nav_calculator_click" data-track-location="mobile_drawer">Calculator</a>
         <details><summary>Services</summary><div class="mobile-sub"><a href="../index.html#estimate">Roof Repair</a><a href="../index.html#estimate">Roof Replacement</a><a href="../index.html#estimate">Storm Damage</a><a href="../index.html#estimate">Commercial Roofing</a><a href="../index.html#estimate">Siding</a><a href="../index.html#estimate">Gutters</a></div></details>
         <details><summary>Roof Types</summary><div class="mobile-sub"><a href="../index.html#services">Shingle Roofing</a><a href="../index.html#services">Metal Roofing</a><a href="../index.html#services">Rubber Roofing</a><a href="../index.html#services">Flat / Low-Slope Roofing</a></div></details>
-        <details><summary>Service Areas</summary><div class="mobile-sub"><a href="charlotte-nc.html">Charlotte</a><a href="mint-hill-nc.html">Mint Hill</a><a href="matthews-nc.html">Matthews</a><a href="weddington-nc.html">Weddington</a><a href="waxhaw-nc.html">Waxhaw</a><a href="marvin-nc.html">Marvin</a></div></details>
+        <details><summary>Service Areas</summary><div class="mobile-sub"><a href="../service-areas/charlotte-nc.html">Charlotte</a><a href="../service-areas/mint-hill-nc.html">Mint Hill</a><a href="../service-areas/matthews-nc.html">Matthews</a><a href="../service-areas/weddington-nc.html">Weddington</a><a href="../service-areas/waxhaw-nc.html">Waxhaw</a><a href="../service-areas/marvin-nc.html">Marvin</a></div></details>
         <details><summary>Why Roof-M-All</summary><div class="mobile-sub"><a href="../index.html#standards">About Us</a><a href="../index.html#standards">What to Expect</a><a href="../index.html#standards">Warranty / Guarantee</a><a href="../index.html#reviews">Reviews</a><a href="../index.html#gallery">Gallery</a><a href="../index.html#footer">Careers</a></div></details>
         <a href="../index.html#gallery">Gallery</a><a href="../faqs.html">FAQs</a><a class="btn btn-primary" href="../index.html#estimate">Get A FREE Estimate</a>
       </div>
@@ -517,12 +545,12 @@
       <div class="footer-rating-row">
         <div class="footer-ratings" aria-label="Roof-M-All ratings">
           <div class="footer-rating"><span class="trust-google" aria-hidden="true">G</span><div class="trust-copy"><span class="trust-stars">★★★★★</span><span class="trust-score">4.8 Rating</span></div></div>
-          <div class="footer-rating"><img class="trust-logo" src="../assets/facebook-logo.jpg" alt="Facebook logo"><div class="trust-copy"><span class="trust-stars">★★★★★</span><span class="trust-score">5.0 Rating</span></div></div>
-          <div class="footer-rating"><img class="trust-logo" src="../assets/bbb-logo.jpg" alt="BBB logo"><div class="trust-copy"><span class="trust-score">Rated A+</span><span class="trust-score">Trusted</span></div></div>
+          <div class="footer-rating"><img class="trust-logo" src="assets/facebook-logo.jpg" alt="Facebook logo"><div class="trust-copy"><span class="trust-stars">★★★★★</span><span class="trust-score">5.0 Rating</span></div></div>
+          <div class="footer-rating"><img class="trust-logo" src="assets/bbb-logo.jpg" alt="BBB logo"><div class="trust-copy"><span class="trust-score">Rated A+</span><span class="trust-score">Trusted</span></div></div>
         </div>
         <div class="footer-socials">
           <a href="https://maps.app.goo.gl/6RCxzyzMoqnB5wxQ9?g_st=ic" target="_blank" rel="noopener" aria-label="Roof-M-All Google Maps profile"><span class="trust-google" aria-hidden="true">G</span></a>
-          <a href="https://www.facebook.com/ROOF.M.ALL/" target="_blank" rel="noopener" aria-label="Roof-M-All Facebook profile"><img src="../assets/facebook-logo.jpg" alt=""></a>
+          <a href="https://www.facebook.com/ROOF.M.ALL/" target="_blank" rel="noopener" aria-label="Roof-M-All Facebook profile"><img src="assets/facebook-logo.jpg" alt=""></a>
         </div>
       </div>
       <div class="footer-bottom">
