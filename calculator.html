@@ -249,7 +249,7 @@
           <div class="calc-actions"><button class="btn btn-primary" type="submit">Calculate Range</button><a class="btn btn-dark" href="#free-estimate">Get a Real Estimate</a></div>
         </form>
 
-        <aside class="result-card" aria-live="polite">
+        <aside class="result-card" id="rough-planning-range" aria-live="polite">
           <div class="result-label">Rough planning range</div>
           <div class="result-range" data-result-range>$8k–$16k</div>
           <p data-result-copy>For a typical asphalt shingle roof replacement. Adjust the project details to refine the planning range.</p>
@@ -423,7 +423,7 @@
       if(initialProject && labels[initialProject]) project.value = initialProject;
       project.addEventListener('change', () => { showFields(); calc(); });
       form.addEventListener('input', calc);
-      form.addEventListener('submit', event => { event.preventDefault(); calc(); document.getElementById('free-estimate')?.scrollIntoView({behavior:'smooth'}); });
+      form.addEventListener('submit', event => { event.preventDefault(); calc(); document.getElementById('rough-planning-range')?.scrollIntoView({behavior:'smooth', block:'start'}); });
       showFields(); calc();
     })();
 
