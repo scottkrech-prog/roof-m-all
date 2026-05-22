@@ -89,14 +89,21 @@
 
 
 
-    /* Shared mobile drawer readability: match index-style white menu with dark text */
-    .mobile-drawer{background:#fff!important;color:#172033!important}
+    /* Shared mobile drawer style: white panel, dark text, blue +/- icons, no black button outlines */
+    .mobile-drawer{background:#fff!important;color:#172033!important;border-top:1px solid #e8ebf1!important;box-shadow:0 24px 48px rgba(0,0,0,.12)!important}
     .mobile-drawer.open{background:#fff!important;color:#172033!important}
-    .mobile-drawer-inner,.mobile-drawer details,.mobile-drawer .mobile-sub{background:transparent!important;color:#172033!important}
-    .mobile-drawer summary{color:#172033!important;background:transparent!important}
-    .mobile-drawer a:not(.btn){color:#344055!important;background:transparent!important}
-    .mobile-drawer .mobile-sub a{color:#344055!important;background:transparent!important}
-    .mobile-drawer .btn,.mobile-drawer .btn-primary{background:var(--cta,#2878f1)!important;color:#fff!important}
+    .mobile-drawer-inner{background:#fff!important;color:#172033!important;padding:18px 0 22px!important}
+    .mobile-drawer details{background:#fff!important;color:#172033!important;border:0!important;border-bottom:1px solid #e8ebf1!important;box-shadow:none!important}
+    .mobile-drawer summary{list-style:none!important;display:flex!important;align-items:center!important;justify-content:space-between!important;padding:15px 0!important;margin:0!important;border:0!important;outline:0!important;box-shadow:none!important;background:#fff!important;color:#172033!important;font-weight:900!important;cursor:pointer!important;-webkit-tap-highlight-color:transparent}
+    .mobile-drawer summary::-webkit-details-marker{display:none!important}
+    .mobile-drawer summary::after{content:"+"!important;color:var(--blue,#2878f1)!important;font-size:28px!important;font-weight:900!important;line-height:1!important;background:transparent!important;border:0!important;box-shadow:none!important}
+    .mobile-drawer details[open] summary::after{content:"–"!important}
+    .mobile-drawer a:not(.btn){display:block!important;padding:9px 0!important;margin:0!important;border:0!important;outline:0!important;box-shadow:none!important;background:#fff!important;color:#344055!important;font-weight:700!important;text-decoration:none!important;-webkit-tap-highlight-color:transparent}
+    .mobile-drawer .mobile-sub{display:block!important;padding:0 0 12px 28px!important;background:#fff!important;color:#172033!important;border:0!important;box-shadow:none!important}
+    .mobile-drawer .mobile-sub a{background:#fff!important;color:#344055!important;border:0!important;outline:0!important;box-shadow:none!important}
+    .mobile-drawer summary:focus-visible,.mobile-drawer a:not(.btn):focus-visible{background:#f2f6ff!important;outline:0!important;box-shadow:none!important}
+    .mobile-drawer .btn,.mobile-drawer .btn-primary{display:flex!important;align-items:center!important;justify-content:center!important;min-height:52px!important;width:100%!important;margin-top:16px!important;padding:0 20px!important;border:0!important;outline:0!important;border-radius:12px!important;background:var(--cta,#2878f1)!important;color:#fff!important;box-shadow:0 16px 34px rgba(36,102,210,.34)!important;font-weight:700!important;text-align:center!important;text-decoration:none!important}
+    .mobile-drawer .btn:hover,.mobile-drawer .btn-primary:hover,.mobile-drawer .btn:focus-visible,.mobile-drawer .btn-primary:focus-visible{background:var(--cta-hover,#1f69da)!important;color:#fff!important;outline:0!important;box-shadow:0 16px 34px rgba(36,102,210,.34)!important}
 </style>
 </head>
 <body>
