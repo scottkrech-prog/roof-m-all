@@ -104,6 +104,22 @@
     .mobile-drawer summary:focus-visible,.mobile-drawer a:not(.btn):focus-visible{background:#f2f6ff!important;outline:0!important;box-shadow:none!important}
     .mobile-drawer .btn,.mobile-drawer .btn-primary{display:flex!important;align-items:center!important;justify-content:center!important;min-height:52px!important;width:100%!important;margin-top:16px!important;padding:0 20px!important;border:0!important;outline:0!important;border-radius:12px!important;background:var(--cta,#2878f1)!important;color:#fff!important;box-shadow:0 16px 34px rgba(36,102,210,.34)!important;font-weight:700!important;text-align:center!important;text-decoration:none!important}
     .mobile-drawer .btn:hover,.mobile-drawer .btn-primary:hover,.mobile-drawer .btn:focus-visible,.mobile-drawer .btn-primary:focus-visible{background:var(--cta-hover,#1f69da)!important;color:#fff!important;outline:0!important;box-shadow:0 16px 34px rgba(36,102,210,.34)!important}
+
+
+    /* Calculator page mirrors homepage calculator UI */
+    .home-calculator{background:linear-gradient(180deg,#fff 0%,#f5f7fb 100%);scroll-margin-top:96px}
+    .home-calc-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:28px;align-items:start}
+    .home-calc-intro{background:#0d1020;color:#fff;border-radius:28px;padding:30px;box-shadow:0 24px 64px rgba(13,16,32,.18)}
+    .home-calc-intro .eyebrow{color:var(--blue-soft)}
+    .home-calc-intro h2{font-size:clamp(32px,4vw,48px);line-height:1.06;margin:0 0 14px;letter-spacing:-.045em;text-wrap:balance}
+    .home-calc-intro p{color:#d8ddeb;margin:0 0 18px;font-size:18px;line-height:1.5}
+    .home-calc-bullets{display:grid;gap:10px;margin-top:18px;color:#eef3ff;font-weight:700}
+    .home-calc-bullets span{display:flex;gap:10px;align-items:flex-start}.home-calc-bullets span::before{content:"✓";color:#8fc7ff;font-weight:900}
+    .home-calc-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:0 20px 58px rgba(18,20,31,.10)}
+    .home-calc-form{display:grid;gap:14px}.home-calc-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.home-calc-field{display:grid;gap:7px}.home-calc-field.full{grid-column:1/-1}.home-calc-field label{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:#3b3f4d}.home-calc-field input,.home-calc-field select{width:100%;border:1px solid #dcdfe8;border-radius:10px;padding:10px 12px;font:inherit;background:#f8f9fd;color:#111}.home-calc-field small{color:var(--muted);font-size:12px;line-height:1.35}
+    .home-calc-result{position:absolute;z-index:8;left:18px;right:18px;top:18px;border-radius:22px;background:#f1f6ff;border:1px solid #d9e8ff;padding:20px;box-shadow:0 22px 54px rgba(18,20,31,.22);opacity:0;visibility:hidden;transform:translateY(-16px);pointer-events:none;transition:opacity .24s ease,visibility .24s ease,transform .32s ease}.home-calc-result.is-visible{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}.home-calc-result-close{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:999px;border:1px solid #c8daf8;background:#fff;color:#172033;font-size:22px;line-height:1;cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 18px rgba(18,20,31,.10)}.home-calc-result-close:hover{background:#eaf3ff}.home-calc-result-label{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin-bottom:6px;padding-right:38px}.home-calc-result-range{font-size:clamp(34px,5vw,52px);line-height:1;font-weight:800;letter-spacing:-.05em;color:#101116}.home-calc-result p{margin:10px 0 0;color:#4f5666}.home-calc-result-list{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}.home-calc-result-list div{background:#fff;border-radius:14px;padding:10px}.home-calc-result-list span{display:block;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.home-calc-result-list strong{display:block;color:#111;font-size:13px;line-height:1.25;margin-top:3px}.home-calc-note{margin-top:12px;color:#737987;font-size:12px}.home-calc-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    @media(max-width:640px){.home-calculator{scroll-margin-top:72px}.home-calc-grid{grid-template-columns:1fr;gap:18px}.home-calc-intro,.home-calc-card{border-radius:22px;padding:22px}.home-calc-intro h2{font-size:clamp(30px,8.5vw,40px)}.home-calc-intro p{font-size:16px}.home-calc-fields,.home-calc-result-list{grid-template-columns:1fr}.home-calc-actions .btn,.home-calc-form>.btn{width:100%}}
+
 </style>
 </head>
 <body>
@@ -244,41 +260,48 @@
       </div>
     </section>
 
-    <section class="section" id="calculator">
-      <div class="wrap calc-shell">
-        <form class="panel" data-calculator-form>
-        <aside class="result-card" id="rough-planning-range" role="dialog" aria-modal="false" aria-labelledby="rough-planning-range-label" aria-live="polite" aria-hidden="true">
-          <button class="result-close" type="button" aria-label="Close rough planning range" data-result-close>&times;</button>
-          <div class="result-label" id="rough-planning-range-label">Rough planning range</div>
-          <div class="result-range" data-result-range>$8k–$16k</div>
-          <p data-result-copy>For a typical asphalt shingle roof replacement. Adjust the project details to refine the planning range.</p>
-          <div class="result-list">
-            <div><span>Project</span><strong data-result-project>New roof / roof replacement</strong></div>
-            <div><span>Best next step</span><strong data-result-next>Free inspection / estimate</strong></div>
-            <div><span>Confidence</span><strong>Ballpark only</strong></div>
+    <section class="section home-calculator" id="calculator" aria-label="Roof-M-All project calculator">
+      <div class="wrap home-calc-grid">
+        <div class="home-calc-intro">
+          <div class="eyebrow">Project calculator</div>
+          <h2>Get a rough project range without leaving the page.</h2>
+          <p>Pick the project type, adjust the basics, and use the ballpark to decide whether it is time for a free Roof-M-All estimate.</p>
+          <div class="home-calc-bullets" aria-label="Calculator notes">
+            <span>Rough planning ranges only — not a quote.</span>
+            <span>Roof-M-All still needs to inspect and measure for a real number.</span>
+            <span>Works for roofing, repairs, gutters, siding, and maintenance planning.</span>
           </div>
-          <div class="notice">This calculator is for planning only. Roof-M-All needs to inspect, measure, and confirm materials/scope before giving a real quote.</div>
-        </aside>
-          <div class="eyebrow">Project details</div>
-          <h2>Estimate a rough planning range.</h2>
-          <p>Start with your project type. The fields below adjust for roofing, siding, gutter, repair, and maintenance-plan questions.</p>
-          <div class="form-grid">
-            <div class="field full"><label for="projectType">Project</label><select id="projectType" name="projectType" data-project-type><option value="maintenance">Exterior maintenance plan</option><option value="new-roof">New roof / roof replacement</option><option value="metal-roof">Metal roof</option><option value="roof-repair">Roof repair / leak</option><option value="gutters">Gutters</option><option value="siding">Siding</option></select></div>
-            <div class="field" data-field="roofArea"><label for="roofArea">Roof size / area</label><input id="roofArea" name="roofArea" type="number" min="300" max="12000" step="50" value="2200"><small>Use roof square footage if known. If not, use home size as a rough proxy.</small></div>
-            <div class="field" data-field="sidingArea"><label for="sidingArea">Siding wall area</label><input id="sidingArea" name="sidingArea" type="number" min="300" max="8000" step="50" value="2000"><small>Approximate exterior wall square footage.</small></div>
-            <div class="field" data-field="gutterLength"><label for="gutterLength">Gutter length</label><input id="gutterLength" name="gutterLength" type="number" min="40" max="800" step="10" value="180"><small>Total linear feet around roof edges.</small></div>
-            <div class="field"><label for="stories">Stories / access</label><select id="stories" name="stories"><option value="1">1 story / easier access</option><option value="1.12" selected>2 stories / typical access</option><option value="1.24">3+ stories or difficult access</option></select></div>
-            <div class="field"><label for="complexity">Complexity</label><select id="complexity" name="complexity"><option value="0.9">Simple</option><option value="1" selected>Typical</option><option value="1.18">Complex / steep / many details</option><option value="1.35">Very complex or premium scope</option></select></div>
-            <div class="field" data-field="roofMaterial"><label for="roofMaterial">Roof material</label><select id="roofMaterial" name="roofMaterial"><option value="architectural" selected>Architectural asphalt shingles</option><option value="basic">Basic asphalt shingles</option><option value="premium">Premium shingles / upgraded system</option></select></div>
-            <div class="field" data-field="sidingMaterial"><label for="sidingMaterial">Siding material</label><select id="sidingMaterial" name="sidingMaterial"><option value="vinyl" selected>Vinyl siding</option><option value="fiber-cement">Fiber cement / premium siding</option><option value="repair">Targeted siding repair</option></select></div>
-            <div class="field" data-field="gutterMaterial"><label for="gutterMaterial">Gutter material</label><select id="gutterMaterial" name="gutterMaterial"><option value="aluminum" selected>Seamless aluminum</option><option value="premium">Premium / specialty gutters</option><option value="guards">Gutters + guard-style add-on</option></select></div>
-            <div class="field"><label for="urgency">Urgency</label><select id="urgency" name="urgency"><option value="planning">Planning / researching</option><option value="soon">Need estimate soon</option><option value="storm">Recent storm damage</option><option value="leak">Active leak or urgent issue</option></select></div>
-            <div class="field full"><label for="zip">City or ZIP</label><input id="zip" name="zip" type="text" placeholder="Charlotte, Mint Hill, Matthews, Waxhaw…"></div>
+        </div>
+        <div class="home-calc-card">
+          <div class="home-calc-result" id="home-calculator-result" role="dialog" aria-modal="false" aria-labelledby="home-calculator-result-label" aria-live="polite" aria-hidden="true">
+            <button class="home-calc-result-close" type="button" aria-label="Close rough planning range" data-home-calc-close>&times;</button>
+            <div class="home-calc-result-label" id="home-calculator-result-label">Rough planning range</div>
+            <div class="home-calc-result-range" data-home-calc-range>$12k–$20k</div>
+            <p data-home-calc-copy>For a typical asphalt shingle roof replacement. Adjust the project details to refine the planning range.</p>
+            <div class="home-calc-result-list">
+              <div><span>Project</span><strong data-home-calc-result-project>New roof / roof replacement</strong></div>
+              <div><span>Best next step</span><strong data-home-calc-next>Free inspection / estimate</strong></div>
+              <div><span>Confidence</span><strong>Ballpark only</strong></div>
+            </div>
+            <div class="home-calc-note">Ballpark ranges are based on public 2026 Charlotte/NC cost guidance. Roof-M-All still needs to inspect &amp; measure for a precise quote.</div>
+            <div class="home-calc-actions"><a class="btn btn-primary" href="#free-estimate" data-track-event="home_calculator_estimate_click">Request a free estimate</a><a class="btn btn-dark" href="calculator.html" data-track-event="home_calculator_full_page_click">Open full calculator page</a></div>
           </div>
-          <div class="calc-actions"><button class="btn btn-primary" type="submit">Calculate Range</button><a class="btn btn-dark" href="#free-estimate">Get a Real Estimate</a></div>
-        </form>
-
-
+          <form class="home-calc-form" data-home-calculator-form>
+            <div class="home-calc-fields">
+              <div class="home-calc-field full"><label for="homeCalcProject">Project</label><select id="homeCalcProject" name="project" data-home-calc-project><option value="new-roof" selected>New roof / roof replacement</option><option value="metal-roof">Metal roof</option><option value="roof-repair">Roof repair / leak</option><option value="gutters">Gutters</option><option value="siding">Siding</option><option value="maintenance">Exterior maintenance plan</option></select></div>
+              <div class="home-calc-field" data-home-calc-field="roofArea"><label for="homeCalcRoofArea">Roof size / area</label><input id="homeCalcRoofArea" name="roofArea" type="number" min="300" max="12000" step="50" value="2200"><small>Use roof square footage if known, or home size as a rough proxy.</small></div>
+              <div class="home-calc-field" data-home-calc-field="sidingArea"><label for="homeCalcSidingArea">Siding wall area</label><input id="homeCalcSidingArea" name="sidingArea" type="number" min="300" max="8000" step="50" value="2000"><small>Approximate exterior wall square footage.</small></div>
+              <div class="home-calc-field" data-home-calc-field="gutterLength"><label for="homeCalcGutterLength">Gutter length</label><input id="homeCalcGutterLength" name="gutterLength" type="number" min="40" max="800" step="10" value="180"><small>Total linear feet around roof edges.</small></div>
+              <div class="home-calc-field"><label for="homeCalcStories">Stories / access</label><select id="homeCalcStories" name="stories"><option value="1">1 story / easier access</option><option value="1.12" selected>2 stories / typical access</option><option value="1.24">3+ stories or difficult access</option></select></div>
+              <div class="home-calc-field"><label for="homeCalcComplexity">Complexity</label><select id="homeCalcComplexity" name="complexity"><option value="0.9">Simple</option><option value="1" selected>Typical</option><option value="1.18">Complex / steep / many details</option></select></div>
+              <div class="home-calc-field" data-home-calc-field="roofMaterial"><label for="homeCalcRoofMaterial">Roof material</label><select id="homeCalcRoofMaterial" name="roofMaterial"><option value="basic">Basic asphalt shingles</option><option value="architectural" selected>Architectural asphalt shingles</option><option value="premium">Premium shingles / upgraded system</option></select></div>
+              <div class="home-calc-field" data-home-calc-field="sidingMaterial"><label for="homeCalcSidingMaterial">Siding material</label><select id="homeCalcSidingMaterial" name="sidingMaterial"><option value="vinyl" selected>Vinyl siding</option><option value="fiber-cement">Fiber cement / premium siding</option><option value="repair">Targeted siding repair</option></select></div>
+              <div class="home-calc-field" data-home-calc-field="gutterMaterial"><label for="homeCalcGutterMaterial">Gutter material</label><select id="homeCalcGutterMaterial" name="gutterMaterial"><option value="aluminum" selected>Seamless aluminum</option><option value="premium">Premium / specialty gutters</option><option value="guards">Gutters + guard-style add-on</option></select></div>
+              <div class="home-calc-field"><label for="homeCalcUrgency">Urgency</label><select id="homeCalcUrgency" name="urgency"><option value="planning">Planning / researching</option><option value="soon">Need estimate soon</option><option value="storm">Recent storm damage</option><option value="leak">Active leak or urgent issue</option></select></div>
+            </div>
+            <button class="btn btn-primary" type="submit" data-track-event="home_calculator_submit">Calculate Range</button>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -371,24 +394,24 @@
     })();
 
     (function(){
-      const form = document.querySelector('[data-calculator-form]');
-      const project = document.querySelector('[data-project-type]');
-      const rangeEl = document.querySelector('[data-result-range]');
-      const copyEl = document.querySelector('[data-result-copy]');
-      const projectEl = document.querySelector('[data-result-project]');
-      const nextEl = document.querySelector('[data-result-next]');
+      const form = document.querySelector('[data-home-calculator-form]');
+      if(!form) return;
+      const project = form.querySelector('[data-home-calc-project]');
+      const rangeEl = document.querySelector('[data-home-calc-range]');
+      const copyEl = document.querySelector('[data-home-calc-copy]');
+      const projectEl = document.querySelector('[data-home-calc-result-project]');
+      const nextEl = document.querySelector('[data-home-calc-next]');
+      const result = document.getElementById('home-calculator-result');
+      const closeResult = document.querySelector('[data-home-calc-close]');
       const leadService = document.querySelector('[data-lead-service]');
       const resultField = document.querySelector('[data-calculator-result-field]');
-      const resultCard = document.getElementById('rough-planning-range');
-      const closeResult = document.querySelector('[data-result-close]');
-      if(!form || !project) return;
-      const labels = {maintenance:'Exterior maintenance plan','new-roof':'New roof / roof replacement','metal-roof':'Metal roof','roof-repair':'Roof repair / leak','gutters':'Gutters','siding':'Siding'};
+      const labels = {maintenance:'Exterior maintenance plan','new-roof':'New roof / roof replacement','metal-roof':'Metal roof','roof-repair':'Roof repair / leak',gutters:'Gutters',siding:'Siding'};
       const serviceMap = {maintenance:'Exterior maintenance plan','new-roof':'New roof / roof replacement','metal-roof':'Metal roof','roof-repair':'Roof repair / leak',gutters:'Gutters',siding:'Siding'};
       function money(n){ if(n >= 1000) return '$' + Math.round(n/1000) + 'k'; return '$' + Math.round(n).toLocaleString(); }
       function showFields(){
         const type = project.value;
-        document.querySelectorAll('[data-field]').forEach(el => el.style.display = 'none');
-        const show = names => names.forEach(name => { const el = document.querySelector(`[data-field="${name}"]`); if(el) el.style.display = 'grid'; });
+        form.querySelectorAll('[data-home-calc-field]').forEach(el => el.style.display = 'none');
+        const show = names => names.forEach(name => { const el = form.querySelector(`[data-home-calc-field="${name}"]`); if(el) el.style.display = 'grid'; });
         if(type === 'new-roof') show(['roofArea','roofMaterial']);
         if(type === 'metal-roof') show(['roofArea']);
         if(type === 'roof-repair') show(['roofArea']);
@@ -407,7 +430,7 @@
         if(type === 'new-roof'){
           const rates = {basic:[4,7], architectural:[5,8], premium:[7,11]}[form.roofMaterial.value] || [5,8];
           low = roofArea * rates[0] * story * complexity; high = roofArea * rates[1] * story * complexity;
-          copy = 'Asphalt shingle roof replacement planning range. Public Charlotte/NC guides vary widely; inspection and measurement are required for real pricing.';
+          copy = 'Asphalt shingle roof replacement planning range. Inspection and measurement are required for real pricing.';
         } else if(type === 'metal-roof'){
           low = roofArea * 9 * story * complexity; high = roofArea * 14 * story * complexity;
           copy = 'Metal roofing typically costs more than asphalt shingles. Panel type, trim, complexity, access, and roof condition can move this substantially.';
@@ -431,32 +454,35 @@
         }
         low = Math.max(250, Math.round(low/50)*50); high = Math.max(low + 250, Math.round(high/50)*50);
         const range = `${money(low)}–${money(high)}`;
-        rangeEl.textContent = range;
-        copyEl.textContent = copy;
-        projectEl.textContent = labels[type];
-        nextEl.textContent = next;
+        if(rangeEl) rangeEl.textContent = range;
+        if(copyEl) copyEl.textContent = copy;
+        if(projectEl) projectEl.textContent = labels[type];
+        if(nextEl) nextEl.textContent = next;
         if(leadService) leadService.value = serviceMap[type];
-        const summary = {project: labels[type], range, city_or_zip: form.zip.value || '', urgency: form.urgency.value || '', note: 'Ballpark only; inspection required.'};
-        if(resultField) resultField.value = JSON.stringify(summary);
-        return summary;
+        if(resultField) resultField.value = JSON.stringify({project: labels[type], range, urgency: form.urgency.value || '', note: 'Ballpark only; inspection required.'});
       }
       const initialProject = new URLSearchParams(window.location.search).get('project');
       if(initialProject && labels[initialProject]) project.value = initialProject;
       project.addEventListener('change', () => { showFields(); calc(); });
       function revealResult(){
-        if(!resultCard) return;
-        resultCard.classList.add('is-visible');
-        resultCard.setAttribute('aria-hidden', 'false');
+        if(!result) return;
+        result.classList.add('is-visible');
+        result.setAttribute('aria-hidden', 'false');
       }
       function hideResult(){
-        if(!resultCard) return;
-        resultCard.classList.remove('is-visible');
-        resultCard.setAttribute('aria-hidden', 'true');
+        if(!result) return;
+        result.classList.remove('is-visible');
+        result.setAttribute('aria-hidden', 'true');
       }
       closeResult?.addEventListener('click', hideResult);
       document.addEventListener('keydown', event => { if(event.key === 'Escape') hideResult(); });
       form.addEventListener('input', calc);
-      form.addEventListener('submit', event => { event.preventDefault(); calc(); revealResult(); });
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        calc();
+        revealResult();
+        if(window.roofMallTrack) window.roofMallTrack('home_calculator_calculate', {project: project.value});
+      });
       showFields(); calc();
     })();
 
