@@ -1,20 +1,32 @@
 # Roof-M-All
 
-> Roof-M-All, LLC is a licensed roofing and exterior contractor based in Mint Hill, NC, serving Charlotte-area homeowners with roof repair, roof replacement, storm damage support, commercial roofing, siding, gutters, reviews, project photos, and a cost calculator.
+> Roof-M-All, LLC is a licensed roofing and exterior contractor based in Mint Hill, NC, serving Charlotte-area homeowners with roof repair, roof replacement, storm damage support, commercial roofing, siding, gutters, reviews, project photos, a cost calculator, and service-area pages.
 
 ## Useful pages
 - [Home](https://www.roof-m-all.com/): Roof-M-All homepage with estimate form, reviews, gallery, services, credentials, and local trust proof.
-- [Project cost calculator](https://www.roof-m-all.com/calculator.html): Ballpark planning ranges for roofing, gutters, siding, roof repair, metal roofing, and maintenance plans.
+- [About Roof-M-All](https://www.roof-m-all.com/about.html): Company proof page with verified business facts, service area, license, GAF profile, and rating context.
+- [Storm damage insurance claim guide](https://www.roof-m-all.com/storm-damage-insurance-claim-process.html): Step-by-step guide for Charlotte-area homeowners after wind or hail roof damage.
+- [Project cost calculator](https://www.roof-m-all.com/calculator.html): Ballpark planning ranges for roofing, gutters, siding, roof repair, metal roofing, and maintenance plans, plus cost-factor explanations.
 - [FAQs](https://www.roof-m-all.com/faqs.html): Roof-M-All roofing, storm damage, estimates, repairs, siding, gutters, and process questions.
 - [Project gallery](https://www.roof-m-all.com/#gallery): Homepage project gallery with 59 residential roofing project photos.
 - [Reviews](https://www.roof-m-all.com/#reviews): Homepage review section with Google, Facebook, and BBB customer excerpts.
+- [Sitemap](https://www.roof-m-all.com/sitemap.xml): XML sitemap for crawler discovery.
+
+## Service pages
+- [Roof Repair](https://www.roof-m-all.com/services/roof-repair.html): Leak diagnosis, missing shingles, flashing problems, and repair-vs-replacement guidance.
+- [Roof Replacement](https://www.roof-m-all.com/services/roof-replacement.html): Replacement planning for aging roofs, repeated leaks, storm damage, materials, and inspection needs.
+- [Storm Damage Roofing](https://www.roof-m-all.com/services/storm-damage-roofing.html): Wind, hail, heavy rain, documentation, and inspection guidance.
+- [Commercial Roofing](https://www.roof-m-all.com/services/commercial-roofing.html): Commercial roof leak, low-slope, flat roof, storm, and replacement support.
+- [Siding](https://www.roof-m-all.com/services/siding.html): Siding repair and replacement as part of the home exterior system.
+- [Gutters](https://www.roof-m-all.com/services/gutters.html): Gutter installation/replacement and roofline water-management issues.
+
+## Service-area pages
 - [Charlotte service area](https://www.roof-m-all.com/service-areas/charlotte-nc.html): Roofing services for Charlotte, NC homeowners and businesses.
 - [Mint Hill service area](https://www.roof-m-all.com/service-areas/mint-hill-nc.html): Roofing services for Mint Hill, NC, where Roof-M-All is based.
 - [Matthews service area](https://www.roof-m-all.com/service-areas/matthews-nc.html): Roofing services for Matthews, NC.
 - [Weddington service area](https://www.roof-m-all.com/service-areas/weddington-nc.html): Roofing services for Weddington, NC.
 - [Waxhaw service area](https://www.roof-m-all.com/service-areas/waxhaw-nc.html): Roofing services for Waxhaw, NC.
 - [Marvin service area](https://www.roof-m-all.com/service-areas/marvin-nc.html): Roofing services for Marvin, NC.
-- [Sitemap](https://www.roof-m-all.com/sitemap.xml): XML sitemap for crawler discovery.
 
 ## Core services
 - Roof repair
@@ -56,7 +68,7 @@
 - GAF lists number of employees as more than 5
 - GAF listed State License Number: 75560
 - Google Business Profile: 52 Google reviews with a 4.8 average rating. Homepage also displays Facebook 5.0 rating and BBB A+ trusted signals.
-- Homepage includes 33 manually transcribed Google, Facebook, and BBB review excerpts.
+- Homepage includes manually transcribed Google, Facebook, and BBB review excerpts.
 - Homepage project gallery includes 59 Roof-M-All residential roofing project photos in assets/gallery/manifest.json.
 - Project cost calculator covers exterior maintenance plan, new roof, metal roof, roof repair, gutters, and siding ballpark planning ranges.
 - AI crawlers are welcome to index public site content.
