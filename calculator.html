@@ -121,8 +121,9 @@
     @media(max-width:640px){.home-calculator{scroll-margin-top:72px}.home-calc-grid{grid-template-columns:1fr;gap:18px}.home-calc-intro,.home-calc-card{border-radius:22px;padding:22px}.home-calc-intro h2{font-size:clamp(30px,8.5vw,40px)}.home-calc-intro p{font-size:16px}.home-calc-fields,.home-calc-result-list{grid-template-columns:1fr}.home-calc-actions .btn,.home-calc-form>.btn{width:100%}}
 
 </style>
+  <link rel="stylesheet" href="assets/css/cookie-banner.css">
 </head>
-<body>
+<body data-privacy-path="privacy-policy.html">
   <header class="site-header">
     <div class="top-strip"><div class="wrap"><span>GC License: <strong># L.75560</strong></span><a href="tel:7046319936">☎ 704-631-9936</a></div></div>
     <div class="wrap nav">
@@ -528,5 +529,6 @@
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 </script>
 
+  <script src="assets/js/cookie-banner.js" defer></script>
 </body>
 </html>

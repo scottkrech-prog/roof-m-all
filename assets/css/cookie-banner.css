@@ -1,0 +1,18 @@
+/* Roof-M-All cookie notice */
+.cookie-banner{position:fixed;left:50%;bottom:24px;z-index:120;display:none;width:min(1120px,calc(100vw - 40px));transform:translateX(-50%);background:#fff;color:#172033;border:1px solid #dfe5ef;border-radius:22px;box-shadow:0 22px 70px rgba(13,16,32,.22);font-family:"Plus Jakarta Sans",Arial,sans-serif}
+.cookie-banner.is-visible{display:block}
+.cookie-banner__inner{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:18px 20px 18px 22px}
+.cookie-banner__copy{display:grid;gap:4px;max-width:760px}
+.cookie-banner__title{margin:0;color:#101116;font-size:16px;font-weight:900;letter-spacing:-.01em}
+.cookie-banner__text{margin:0;color:#566071;font-size:14px;line-height:1.45}
+.cookie-banner__text a{color:#1f69da;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.cookie-banner__actions{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.cookie-banner__button{appearance:none;border:0;border-radius:999px;cursor:pointer;font:inherit;font-size:14px;font-weight:900;line-height:1;padding:13px 18px;transition:background .18s ease,color .18s ease,transform .18s ease,box-shadow .18s ease}
+.cookie-banner__button:focus-visible{outline:3px solid rgba(47,134,255,.28);outline-offset:2px}
+.cookie-banner__button--accept{background:#2878f1;color:#fff;box-shadow:0 12px 24px rgba(40,120,241,.28)}
+.cookie-banner__button--accept:hover{background:#1f69da;transform:translateY(-1px)}
+.cookie-banner__button--decline{background:#eef3fb;color:#172033;border:1px solid #dce6f5}
+.cookie-banner__button--decline:hover{background:#e3ecf8}
+@media(max-width:640px){.cookie-banner{left:14px;right:14px;bottom:calc(84px + env(safe-area-inset-bottom));width:auto;transform:none;border-radius:18px}.cookie-banner__inner{display:grid;gap:14px;padding:16px}.cookie-banner__copy{max-width:none}.cookie-banner__title{font-size:15px}.cookie-banner__text{font-size:13px}.cookie-banner__actions{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:9px}.cookie-banner__button{width:100%;padding:13px 12px}}
+@media(max-width:380px){.cookie-banner{bottom:calc(76px + env(safe-area-inset-bottom))}.cookie-banner__actions{grid-template-columns:1fr}.cookie-banner__button--accept{order:-1}}
+@media(prefers-reduced-motion:reduce){.cookie-banner__button{transition:none}.cookie-banner__button--accept:hover{transform:none}}
