@@ -27,6 +27,10 @@
 - [Weddington service area](https://www.roof-m-all.com/service-areas/weddington-nc.html): Roofing services for Weddington, NC.
 - [Waxhaw service area](https://www.roof-m-all.com/service-areas/waxhaw-nc.html): Roofing services for Waxhaw, NC.
 - [Marvin service area](https://www.roof-m-all.com/service-areas/marvin-nc.html): Roofing services for Marvin, NC.
+- [Concord service area](https://www.roof-m-all.com/service-areas/concord-nc.html): Roofing services for Concord, NC.
+- [Gastonia service area](https://www.roof-m-all.com/service-areas/gastonia-nc.html): Roofing services for Gastonia, NC.
+- [Huntersville service area](https://www.roof-m-all.com/service-areas/huntersville-nc.html): Roofing services for Huntersville, NC.
+- [Mooresville service area](https://www.roof-m-all.com/service-areas/mooresville-nc.html): Roofing services for Mooresville, NC.
 
 ## Core services
 - Roof repair
@@ -44,6 +48,10 @@
 - Weddington, NC
 - Waxhaw, NC
 - Marvin, NC
+- Concord, NC
+- Gastonia, NC
+- Huntersville, NC
+- Mooresville, NC
 - Surrounding North Carolina and South Carolina communities
 
 ## Contact
@@ -74,4 +82,4 @@
 - AI crawlers are welcome to index public site content.
 
 ## GEO report service-area terms to monitor
-Charlotte, Concord, Gastonia, Huntersville, Matthews, Mooresville, NC.
+Charlotte, Concord, Gastonia, Huntersville, Matthews, Mooresville, Mint Hill, Weddington, Waxhaw, Marvin, NC.
