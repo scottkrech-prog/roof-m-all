@@ -48,7 +48,7 @@ Writing format for every section:
 - Answer directly in the first 1–2 sentences.
 - Include one concrete local detail.
 - Name Roof-M-All and the city/service area naturally.
-- End with a real CTA: call 704-631-9936 or request a free estimate.
+- End with a real CTA: call 704-520-9299 or request a free estimate.
 
 ## Phase 3 — Authority Layer, Days 46–90
 Owner: operations + marketing.

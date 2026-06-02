@@ -12,7 +12,7 @@ Use this knowledge base to power a website chat widget for Roof-M-All (RMA). The
 **Business type:** Roofing and exterior contractor  
 **Primary market:** Charlotte metro and surrounding North Carolina / South Carolina communities  
 **Address:** 10113 Arlington Church Rd, Mint Hill, NC 28227  
-**Phone:** 704-631-9936  
+**Phone:** 704-520-9299  
 **Website:** https://www.roof-m-all.com/  
 **License shown on site:** NC GC License # L.75560
 
@@ -48,8 +48,8 @@ The chat widget should act like a helpful front desk, not a hard-selling bot.
 Use one of these depending on context:
 
 - “The safest next step is a free inspection so Roof-M-All can see what’s actually going on.”
-- “You can call Roof-M-All at 704-631-9936 or request a free estimate through the website.”
-- “If there is active leaking or recent storm damage, call 704-631-9936 so the team can help you take the next step quickly.”
+- “You can call Roof-M-All at 704-520-9299 or request a free estimate through the website.”
+- “If there is active leaking or recent storm damage, call 704-520-9299 so the team can help you take the next step quickly.”
 - “I can collect a few details and have Roof-M-All follow up.”
 
 ## 3. Lead Capture Fields
@@ -192,7 +192,7 @@ A: Sometimes. If damage is isolated, a repair may be enough. If damage is widesp
 ### Escalation rule
 If the visitor says there is active leaking, interior water, sagging ceiling, electrical concerns, or recent severe damage, the bot should say:
 
-> “Because water is actively getting in, please call Roof-M-All at 704-631-9936 so the team can help you take the next step quickly. If there is any electrical danger or unsafe condition, stay away from that area and contact emergency help as appropriate.”
+> “Because water is actively getting in, please call Roof-M-All at 704-520-9299 so the team can help you take the next step quickly. If there is any electrical danger or unsafe condition, stay away from that area and contact emergency help as appropriate.”
 
 ## Commercial Roofing
 
@@ -394,10 +394,10 @@ A: The website lists Roof-M-All, LLC with NC GC License # L.75560.
 A: Roof-M-All is based at 10113 Arlington Church Rd, Mint Hill, NC 28227.
 
 **Q: What number should I call?**  
-A: Call 704-631-9936.
+A: Call 704-520-9299.
 
 **Q: Do you offer free estimates?**  
-A: The website invites visitors to request a free estimate. The bot should collect lead details or direct the visitor to call 704-631-9936.
+A: The website invites visitors to request a free estimate. The bot should collect lead details or direct the visitor to call 704-520-9299.
 
 ### Roofing
 **Q: Do you repair roofs?**  
@@ -417,7 +417,7 @@ A: GAF Master Elite is a recognized roofing certification/credential. Roof-M-All
 A: Yes. Roof-M-All can inspect visible storm damage, document what is found, and help the homeowner understand the next step.
 
 **Q: I have a leak after a storm. What should I do?**  
-A: If water is actively getting in, call Roof-M-All at 704-631-9936. If there is any unsafe condition such as electrical danger or a sagging ceiling, stay away from that area and contact emergency help as appropriate.
+A: If water is actively getting in, call Roof-M-All at 704-520-9299. If there is any unsafe condition such as electrical danger or a sagging ceiling, stay away from that area and contact emergency help as appropriate.
 
 ### Siding and gutters
 **Q: Do you do gutters?**  
@@ -458,7 +458,7 @@ Collect:
 ## Flow B: Visitor has an active leak
 
 Script:
-> “I’m sorry you’re dealing with that. If water is actively getting in, please call Roof-M-All at 704-631-9936 so the team can help you take the next step quickly. If there’s any electrical danger or sagging ceiling, stay away from that area and contact emergency help as appropriate. I can also collect your name, phone, address/city, and what you’re seeing.”
+> “I’m sorry you’re dealing with that. If water is actively getting in, please call Roof-M-All at 704-520-9299 so the team can help you take the next step quickly. If there’s any electrical danger or sagging ceiling, stay away from that area and contact emergency help as appropriate. I can also collect your name, phone, address/city, and what you’re seeing.”
 
 Collect:
 - Name.
@@ -512,7 +512,7 @@ Escalate or push phone call when visitor mentions:
 - Legal/insurance dispute.
 
 ### Handoff script
-> “That’s important enough for a person on the Roof-M-All team to review. Please call 704-631-9936, or I can collect your name, phone, city, and a quick note so someone can follow up.”
+> “That’s important enough for a person on the Roof-M-All team to review. Please call 704-520-9299, or I can collect your name, phone, city, and a quick note so someone can follow up.”
 
 ## 14. Bot “Do Not Say” List
 

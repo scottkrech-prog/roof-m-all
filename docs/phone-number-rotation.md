@@ -4,8 +4,8 @@ This repo is prepared to rotate the public website phone number when Scott says 
 
 ## Current active number
 
-- **Number A:** `704-631-9936`
-- Tel format: `7046319936`
+- **Number A:** `704-520-9299`
+- Tel format: `7045209299`
 - Status: **active / public-facing**
 
 ## Alternate number ready for later
@@ -45,7 +45,7 @@ After applying, verify with:
 ```bash
 python3 - <<'PY'
 from pathlib import Path
-for term in ['704-631-9936','7046319936','704-520-9299','7045209299']:
+for term in ['704-520-9299','7045209299','704-520-9299','7045209299']:
     hits=[]
     for p in Path('.').rglob('*'):
         if p.is_dir() or any(part in {'.git','node_modules','dist'} for part in p.parts):
