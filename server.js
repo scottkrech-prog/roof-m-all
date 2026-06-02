@@ -7,10 +7,97 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const DATABASE_URL = process.env.DATABASE_URL;
 const MAX_JSON_BYTES = '64kb';
+const SITE_PASSWORD = process.env.SITE_PASSWORD || '192837';
+const SITE_AUTH_COOKIE = 'rma_site_auth';
 
 app.disable('x-powered-by');
+app.set('trust proxy', 1);
 app.use(express.json({ limit: MAX_JSON_BYTES }));
 app.use(express.urlencoded({ extended: false, limit: MAX_JSON_BYTES }));
+
+function siteAuthToken() {
+  return crypto.createHash('sha256').update(`roof-m-all:${SITE_PASSWORD}`).digest('hex');
+}
+
+function parseCookies(req) {
+  return Object.fromEntries((req.get('cookie') || '').split(';').map((part) => {
+    const index = part.indexOf('=');
+    if (index === -1) return ['', ''];
+    return [part.slice(0, index).trim(), decodeURIComponent(part.slice(index + 1).trim())];
+  }).filter(([key]) => key));
+}
+
+function isPasswordAuthed(req) {
+  if (!SITE_PASSWORD) return true;
+  const token = parseCookies(req)[SITE_AUTH_COOKIE] || '';
+  return token === siteAuthToken();
+}
+
+function passwordPage(message = '', next = '/') {
+  const safeMessage = message ? `<p class="error">${message}</p>` : '';
+  const safeNext = next && next.startsWith('/') ? next : '/';
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Password Required | Roof-M-All</title>
+  <style>
+    :root{color-scheme:dark;--blue:#1f69da;--ink:#0b1220;--card:#111827;--muted:#b8c2d2;--white:#fff;}
+    *{box-sizing:border-box}body{min-height:100vh;margin:0;display:grid;place-items:center;padding:24px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top,#204a8f 0,#0b1220 44%,#060913 100%);color:var(--white)}
+    .card{width:min(430px,100%);background:rgba(17,24,39,.94);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:30px;box-shadow:0 28px 90px rgba(0,0,0,.42)}
+    h1{margin:0 0 10px;font-size:28px;letter-spacing:-.04em}p{margin:0 0 20px;color:var(--muted);line-height:1.5}.error{color:#fecaca;background:rgba(220,38,38,.16);border:1px solid rgba(248,113,113,.35);padding:10px 12px;border-radius:12px}
+    label{display:block;margin:0 0 8px;font-weight:800}input{width:100%;height:52px;border-radius:14px;border:1px solid rgba(255,255,255,.22);background:#fff;color:#0b1220;padding:0 14px;font:inherit;font-size:20px}button{width:100%;height:52px;margin-top:14px;border:0;border-radius:14px;background:var(--blue);color:#fff;font-weight:900;font-size:16px;cursor:pointer}button:hover{filter:brightness(1.06)}
+  </style>
+</head>
+<body>
+  <main class="card" aria-label="Password required">
+    <h1>Password required</h1>
+    <p>Enter the site password to view this page.</p>
+    ${safeMessage}
+    <form method="post" action="/__site-login">
+      <input type="hidden" name="next" value="${safeNext.replace(/"/g, '&quot;')}">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" inputmode="numeric" autocomplete="current-password" autofocus required>
+      <button type="submit">Unlock Site</button>
+    </form>
+  </main>
+</body>
+</html>`;
+}
+
+function setAuthCookie(req, res) {
+  const isHttps = req.secure || req.get('x-forwarded-proto') === 'https';
+  res.cookie(SITE_AUTH_COOKIE, siteAuthToken(), {
+    httpOnly: true,
+    sameSite: 'lax',
+    secure: isHttps,
+    maxAge: 1000 * 60 * 60 * 12
+  });
+}
+
+app.get('/__site-login', (req, res) => {
+  res.status(401).send(passwordPage('', cleanString(req.query.next || '/', 500)));
+});
+
+app.post('/__site-login', (req, res) => {
+  const next = cleanString(req.body.next || '/', 500);
+  if (req.body.password === SITE_PASSWORD) {
+    setAuthCookie(req, res);
+    return res.redirect(next.startsWith('/') ? next : '/');
+  }
+  res.status(401).send(passwordPage('That password did not match. Try again.', next));
+});
+
+function requireSitePassword(req, res, next) {
+  if (isPasswordAuthed(req)) return next();
+  if (req.path === '/api/health') return next();
+  if (req.method !== 'GET' && req.method !== 'HEAD') {
+    return res.status(401).json({ ok: false, errors: ['Password required.'] });
+  }
+  res.status(401).send(passwordPage('', req.originalUrl || '/'));
+}
 
 let pool = null;
 let dbReady = false;
@@ -129,6 +216,8 @@ app.get('/api/health', async (_req, res) => {
     res.status(503).json({ ok: false, database: 'error' });
   }
 });
+
+app.use(requireSitePassword);
 
 app.post('/api/leads', async (req, res) => {
   const { lead, errors } = normalizeLead(req.body, req);
