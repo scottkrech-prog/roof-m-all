@@ -1,0 +1,21 @@
+{
+  "brand_name": "Roof-M-All",
+  "brand_slug": "rma-roof-health-check",
+  "url": "https://roof-m-all-production.up.railway.app/index.html",
+  "campaign": "Free Roof Health Check",
+  "audience": "Local homeowners in the Charlotte / Matthews / Union County area",
+  "angle": "Catch roof problems before storm season turns them into expensive leaks, repairs, or insurance headaches.",
+  "colors": {
+    "primary": ["#0D1020", "#111827", "#071022"],
+    "secondary": ["#2878F1", "#2F86FF", "#8FB5FF"],
+    "neutrals": ["#FFFFFF", "#E8EEF8", "#CBD5E1"]
+  },
+  "visual_style": "Premium trustworthy local roofing carousel inspired by the approved Evergreen Roof Health Check deck: dark roof/photo texture, electric-blue curved panels, clean white cards, bold high-contrast headlines, polished CTA panels, and finished 1080x1350 Instagram slide composition.",
+  "font_style": "Bold modern sans-serif headlines, large all-caps hook words, crisp white text, electric-blue accents, clean small supporting lines.",
+  "voice_tone": "Direct-response homeowner urgency; calm, local, protective, trustworthy. Avoid generic slogans.",
+  "products_services": ["Free Roof Health Check", "roof repair", "roof replacement", "storm damage", "siding", "gutters", "commercial roofing"],
+  "claims": ["Catch small roof problems before storm season", "Know before it leaks", "Local roofing help", "Free estimate / inspection style call-to-action"],
+  "proof_points": ["Local exterior help", "storm damage support", "roofing, siding, gutters and commercial roofing", "current phone 704-520-9299"],
+  "logo_policy": "No logo, no wordmark, no fake logo, no placeholder badge.",
+  "do_not_do": ["Do not use a logo", "Do not use a logo placeholder", "Do not use weak copy like Get to know your roof", "Do not include any old phone number", "Do not make the deck look flat or generic"]
+}
