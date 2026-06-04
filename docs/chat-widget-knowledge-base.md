@@ -21,7 +21,7 @@ Roof-M-All helps homeowners and property owners with roofing, siding, gutters, s
 
 ### Trust points currently used on the website
 - GAF Master Elite Certified Installer.
-- 5,000+ roofs serviced across NC & SC.
+- 4,811+ roofs serviced across NC & SC.
 - Licensed North Carolina contractor information visible on-site.
 - Reviews mention communication, insurance help, speed, cleanup, professionalism, and workmanship.
 - Ratings/proof currently shown on the site include Google 4.8, Facebook 5.0, and BBB A+ / trusted. Confirm live ratings before using in paid ads or official claims.

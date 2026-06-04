@@ -16,7 +16,7 @@ This document turns the first three growth phases from the Kanban board into sit
   - Insurance language.
   - Warranty terms.
   - GAF Master Elite usage.
-  - 5,000+ roofs serviced claim.
+  - 4,811+ roofs serviced claim.
   - Review excerpts and attribution.
 - Verify every major CTA is visible on mobile:
   - Header phone CTA.
