@@ -97,6 +97,22 @@
 .storm-answer-grid{align-items:start;grid-template-columns:minmax(0,1.02fr) minmax(360px,.78fr);gap:34px}.storm-answer-card{position:relative;align-self:start;background:linear-gradient(180deg,#f7fbff 0%,#edf5ff 100%);border:1px solid #cfe1ff;border-radius:28px;padding:30px;box-shadow:0 24px 70px rgba(27,74,128,.12);overflow:hidden}.storm-answer-card:before{content:"";position:absolute;inset:0 0 auto;height:6px;background:linear-gradient(90deg,#2878f1,#78c8ff)}.storm-answer-card .notice-kicker{display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;color:#0d4ea6;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.14em}.storm-answer-card .notice-kicker:before{content:"!";width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#2878f1;color:#fff;font-weight:900;letter-spacing:0}.storm-answer-card strong{display:block;margin:0 0 10px;color:#101116;font-size:24px;line-height:1.15;letter-spacing:-.03em}.storm-answer-card p{margin:0 0 18px;color:#46546a;font-size:15.5px}.storm-checklist{display:grid;gap:10px;margin:0;padding:0;list-style:none}.storm-checklist li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:12px;border-radius:16px;background:rgba(255,255,255,.72);border:1px solid rgba(40,120,241,.12);color:#263248;font-weight:800;line-height:1.35}.storm-checklist li:before{content:"✓";width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#e6f0ff;color:#2878f1;font-weight:900}.storm-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.storm-steps .step.card{min-height:205px;padding:72px 24px 24px}.storm-steps .step{padding-left:24px}.storm-steps .step:before{left:24px;top:22px;width:38px;height:38px;box-shadow:0 12px 26px rgba(40,120,241,.24)}.storm-steps .step h3{font-size:19px;line-height:1.22;margin-bottom:10px}.storm-signs-grid{grid-template-columns:minmax(0,1fr) 330px;gap:28px;align-items:start}.storm-signs-content h2{max-width:760px}.storm-clue-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}.storm-clue-card{padding:26px;border-radius:26px}.storm-clue-card h3{display:flex;align-items:center;gap:10px}.storm-clue-card h3:before{content:"";width:10px;height:10px;border-radius:999px;background:#2878f1;box-shadow:0 0 0 6px #e7f0ff}.storm-clue-card ul{margin:0;padding-left:20px}.storm-clue-card li{margin:0 0 10px}.storm-next-card{position:sticky;top:118px;background:linear-gradient(180deg,#111827,#071b33);color:#fff;border-color:rgba(255,255,255,.1);box-shadow:0 24px 70px rgba(5,13,28,.25)}.storm-next-card h3{color:#fff}.storm-next-card p{color:#dbe8ff}.storm-next-card .link-grid{grid-template-columns:1fr}.storm-next-card .link-grid a{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.16);color:#fff}.storm-next-card .link-grid a:hover{background:#2878f1;border-color:#2878f1;color:#fff}.storm-next-card .mini-cta{margin-top:18px;padding:16px;border-radius:18px;background:rgba(40,120,241,.18);border:1px solid rgba(120,190,255,.24);color:#eaf4ff;font-size:14px;font-weight:800}
 @media(max-width:1100px){.storm-answer-grid,.storm-signs-grid{grid-template-columns:1fr}.storm-next-card{position:static}.storm-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.storm-answer-card{padding:24px}.storm-steps,.storm-clue-grid{grid-template-columns:1fr}.storm-steps .step.card{min-height:auto;padding:68px 20px 22px}.storm-steps .step{padding-left:20px}.storm-steps .step:before{left:20px}.storm-signs-grid{gap:18px}}
+
+
+    /* Shared homepage menu consistency override */
+    .site-header{background:#fff;border-bottom:1px solid rgba(18,20,31,.10);box-shadow:0 14px 38px rgba(8,12,24,.16)}
+    .nav{background:#fff;color:#172033}
+    .nav-menu,.links{color:#293142;font-size:15px;font-weight:800}
+    .nav-menu a.nav-link,.links a.nav-link,.nav-link,.nav-trigger{color:#293142!important;font-weight:800!important}
+    .nav-menu a.nav-link:hover,.links a.nav-link:hover,.nav-link:hover,.nav-trigger:hover,.nav-item:focus-within .nav-trigger,.nav-item:hover .nav-trigger{color:#0f5fbe!important}
+    .nav-link::after,.nav-trigger::after{background:var(--blue-bright,#2f86ff)}
+    .nav-trigger .chev{color:#2878f1}
+    .phone-link{background:var(--cta,#2878f1);color:#fff!important;box-shadow:0 14px 30px rgba(36,102,210,.30);border:1px solid rgba(255,255,255,.18);font-weight:900}
+    .mobile-menu-btn{background:#f3f7ff;color:#172033;border-color:#dbe6f6}
+    .top-strip{background:rgba(7,12,22,.96);border-bottom:1px solid rgba(255,255,255,.10);box-shadow:0 8px 28px rgba(0,0,0,.28);backdrop-filter:blur(14px);font-weight:700;letter-spacing:.02em}
+    .top-strip a{font-weight:800;color:#fff;text-decoration:none}
+    @media(max-width:640px){.top-strip{font-size:20px;line-height:1.1}.top-strip .wrap{min-height:54px;height:auto;flex-direction:column;gap:2px;padding:8px 0}.top-strip span{display:none}.nav{width:100%;max-width:100%;height:auto;min-height:66px;padding:11px 14px}.brand{min-width:0}.brand img{width:118px}.phone-link{min-height:40px;padding:0 12px;font-size:13px}}
+
 </style>
 <style>
 /* Homepage header/menu parity override for storm guide */
@@ -139,7 +155,7 @@
 .mega-promo .btn{background:linear-gradient(135deg,#22c0f1 0%,#1677f2 100%);color:#fff;border:1px solid rgba(255,255,255,.20);box-shadow:0 18px 38px rgba(4,18,34,.34)}
 .mega-promo .btn:hover{transform:translateY(-1px);box-shadow:0 22px 44px rgba(4,18,34,.42)}
 </style></head><body data-privacy-path="privacy-policy.html"><header class="site-header">
-    <div class="top-strip"><div class="wrap"><span>GC License: <strong># L.75560</strong></span><a href="tel:7045209299">☎ 704-520-9299</a></div></div>
+    <div class="top-strip"><div class="wrap"><span>GC License: <strong># L.75560</strong></span><a href="tel:7045209299">Call/Text: 704-520-9299</a></div></div>
     <div class="wrap nav">
       <a class="brand" href="index.html#top"><img src="assets/logo.png" alt="Roof-M-All logo"></a>
       <nav class="links nav-menu" aria-label="Main navigation">
