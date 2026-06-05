@@ -1436,6 +1436,7 @@
     .estimate-card:after{height:6px;top:0;left:38px;right:38px;border-radius:0 0 999px 999px;background:linear-gradient(90deg,transparent 0%,#17345d 10%,#1f69da 42%,#35c8ff 58%,#1f69da 76%,transparent 100%);box-shadow:0 0 22px rgba(53,200,255,.36),0 6px 18px rgba(31,105,218,.24)}
     .estimate-card .mini{display:none!important}
     .estimate-card h2{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:25px;font-weight:700;line-height:1.02;letter-spacing:-.045em;margin:0 0 7px;text-align:center;color:#fff;text-shadow:0 10px 30px rgba(0,0,0,.28);white-space:nowrap}
+    .estimate-card h2 .form-heading-mobile{display:none}
     .estimate-card p{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:13px;line-height:1.28;margin-bottom:8px}
     .form-inner{padding:8px;gap:6px;border-radius:15px}
     .form input,.form select,.form textarea,.form input:not([type="hidden"]):not([type="checkbox"]),.form select,.form textarea{padding:8px 11px;min-height:36px}
@@ -1444,7 +1445,7 @@
     .form .btn{min-height:44px}
     .form-trust-row{padding:5px 6px}.form-trust-row .trust-rating{background:transparent!important;border:0!important;box-shadow:none!important;padding:2px 0!important}
     @media(max-width:980px){.hero-grid{padding:24px 0 42px}.estimate-card h2{white-space:normal;font-size:clamp(24px,5vw,31px)}}
-    @media(max-width:640px){.hero-grid{padding:16px 0 26px}.hero-trust-line .trust-desktop{display:none}.hero-trust-line .trust-mobile{display:inline}.hero-copy{margin-bottom:14px}.estimate-card{padding:18px 14px 14px}.estimate-card h2{font-size:28px;white-space:normal}.form input,.form select,.form textarea,.form input:not([type="hidden"]):not([type="checkbox"]),.form select,.form textarea{padding:9px 11px;min-height:38px}.form-trust-row{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important;align-items:center!important}.form-trust-row .trust-rating{display:flex!important;align-items:center!important;justify-content:center!important;gap:4px!important;min-width:0!important}.form-trust-row .trust-google,.form-trust-row .trust-logo{width:22px!important;height:22px!important;font-size:22px!important;flex:0 0 22px!important}.form-trust-row .trust-copy{min-width:0!important}.form-trust-row .trust-stars{font-size:9px!important;letter-spacing:.5px!important;white-space:nowrap!important}.form-trust-row .trust-score{font-size:8.5px!important;line-height:1.05!important;letter-spacing:.01em!important;white-space:normal!important}}
+    @media(max-width:640px){.hero-grid{padding:16px 0 26px}.hero-trust-line .trust-desktop{display:none}.hero-trust-line .trust-mobile{display:inline}.hero-copy{margin-bottom:14px}.estimate-card{padding:18px 14px 14px}.estimate-card h2{font-size:28px;white-space:normal}.estimate-card h2 .form-heading-desktop{display:none}.estimate-card h2 .form-heading-mobile{display:inline}.form input,.form select,.form textarea,.form input:not([type="hidden"]):not([type="checkbox"]),.form select,.form textarea{padding:9px 11px;min-height:38px}.form-trust-row{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important;align-items:center!important}.form-trust-row .trust-rating{display:flex!important;align-items:center!important;justify-content:center!important;gap:4px!important;min-width:0!important}.form-trust-row .trust-google,.form-trust-row .trust-logo{width:22px!important;height:22px!important;font-size:22px!important;flex:0 0 22px!important}.form-trust-row .trust-copy{min-width:0!important}.form-trust-row .trust-stars{font-size:9px!important;letter-spacing:.5px!important;white-space:nowrap!important}.form-trust-row .trust-score{font-size:8.5px!important;line-height:1.05!important;letter-spacing:.01em!important;white-space:normal!important}}
 
 </style>
   <link rel="stylesheet" href="assets/css/cookie-banner.css">
@@ -1616,7 +1617,7 @@
         </div>
 
         <aside class="estimate-card" id="estimate">
-          <h2>Get A Fast, FREE Estimate Now</h2>
+          <h2><span class="form-heading-desktop">Get A Fast, FREE Estimate Now</span><span class="form-heading-mobile">Get A Fast, FREE Estimate</span></h2>
           <p>At Roof-M-All—we handle roof repairs, roof replacement, storm damage, insurance claims, siding, gutters &amp; commercial roofing.</p>
           <form class="form" data-lead-form>
             <div class="form-inner">
