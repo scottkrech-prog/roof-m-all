@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const DATABASE_URL = process.env.DATABASE_URL;
 const MAX_JSON_BYTES = '64kb';
-const SITE_PASSWORD = process.env.SITE_PASSWORD || '192837';
+const SITE_PASSWORD = process.env.SITE_PASSWORD || '';
 const SITE_AUTH_COOKIE = 'rma_site_auth';
 
 app.disable('x-powered-by');
