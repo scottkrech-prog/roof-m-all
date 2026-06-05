@@ -1274,11 +1274,9 @@
     .proof-mark-check{width:78px;height:78px;filter:drop-shadow(0 10px 18px rgba(54,214,106,.22))}
     .proof-badge-featured strong{display:block;font-size:21px;line-height:1.02;letter-spacing:.075em;color:#fff;text-transform:uppercase;white-space:nowrap;text-shadow:0 10px 24px rgba(0,0,0,.28)}
     .proof-badge-featured span{display:block;margin-top:5px;font-size:12px;color:#d8e6fb;letter-spacing:.08em;text-transform:uppercase;font-weight:800;white-space:nowrap}
-    .hero-proof{display:flex;align-items:center;gap:16px;width:min(390px,100%);margin-top:18px;padding:13px 16px;border:1px solid rgba(158,200,255,.18);border-radius:22px;background:linear-gradient(135deg,rgba(255,255,255,.105),rgba(255,255,255,.035));box-shadow:0 18px 50px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.12);backdrop-filter:blur(14px)}
-    .hero-proof p{margin:0;min-width:0}.hero-proof strong{display:block;color:#fff;font-size:17px;line-height:1.04;letter-spacing:.065em;text-transform:uppercase;text-shadow:0 10px 24px rgba(0,0,0,.30);white-space:nowrap}.hero-proof span{display:block;margin-top:4px;color:#d8e6fb;font-size:11px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
-    .hero-proof .proof-mark-gaf{width:72px;height:72px}.hero-proof .proof-mark-check{width:66px;height:66px}.hero-proof-right{width:100%;margin:14px 0 0;padding:12px 14px;border-color:rgba(53,200,255,.20);background:linear-gradient(135deg,rgba(15,45,86,.48),rgba(255,255,255,.035))}.hero-proof-right strong{font-size:16px}.hero-proof-right span{font-size:10.5px}
+    .hero-form-column{min-width:0}.hero-proof{display:flex;align-items:center;gap:14px;width:100%;margin:0;padding:0;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important}.hero-proof p{margin:0;min-width:0}.hero-proof strong{display:block;color:#fff;font-size:18px;line-height:1.04;letter-spacing:.065em;text-transform:uppercase;text-shadow:0 10px 24px rgba(0,0,0,.30);white-space:nowrap}.hero-proof span{display:block;margin-top:4px;color:#d8e6fb;font-size:11px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}.hero-proof .proof-mark-gaf{width:78px;height:78px}.hero-proof-left{grid-column:1;grid-row:2;align-self:start;margin-top:-34px}.hero-proof-right{grid-column:2;grid-row:2;align-self:start;justify-content:center;text-align:center;margin-top:-22px}.hero-proof-right strong{font-size:19px}.hero-proof-right span{font-size:11px}
     @media(max-width:980px){.as-seen .proof-ribbon.proof-ribbon-featured{grid-template-columns:1fr;max-width:620px;width:min(620px,100%)}}
-    @media(max-width:640px){.top-estimate-link{display:none}.top-call-link{display:inline}.form input:not([type="hidden"]):not([type="checkbox"]),.form select,.form textarea{padding:9px 12px}.form textarea{min-height:56px}.as-seen .proof-ribbon.proof-ribbon-featured{grid-template-columns:1fr;gap:8px;padding:8px}.as-seen .proof-ribbon.proof-ribbon-featured:after{display:none}.proof-badge-featured,.proof-badge-featured:first-child,.proof-badge-featured:nth-child(2){border-radius:18px;padding:12px 14px;gap:14px;justify-content:flex-start}.proof-mark-gaf{width:76px;height:76px}.proof-mark-check{width:72px;height:72px}.proof-badge-featured strong{font-size:16px;white-space:normal}.proof-badge-featured span{font-size:10px;white-space:normal}.hero-proof{width:100%;margin-top:14px;padding:12px 14px;border-radius:18px;gap:14px}.hero-proof strong{font-size:15px;white-space:normal}.hero-proof span{font-size:10px;white-space:normal}.hero-proof .proof-mark-gaf{width:68px;height:68px}.hero-proof .proof-mark-check{width:62px;height:62px}.hero-proof-right{margin-top:12px}}
+    @media(max-width:640px){.top-estimate-link{display:none}.top-call-link{display:inline}.form input:not([type="hidden"]):not([type="checkbox"]),.form select,.form textarea{padding:9px 12px}.form textarea{min-height:56px}.as-seen .proof-ribbon.proof-ribbon-featured{grid-template-columns:1fr;gap:8px;padding:8px}.as-seen .proof-ribbon.proof-ribbon-featured:after{display:none}.proof-badge-featured,.proof-badge-featured:first-child,.proof-badge-featured:nth-child(2){border-radius:18px;padding:12px 14px;gap:14px;justify-content:flex-start}.proof-mark-gaf{width:76px;height:76px}.proof-mark-check{width:72px;height:72px}.proof-badge-featured strong{font-size:16px;white-space:normal}.proof-badge-featured span{font-size:10px;white-space:normal}.hero-grid>div:first-child{order:1}.hero-proof-left{order:2}.hero-form-column{order:3}.hero-proof-right{order:4}.hero-proof{gap:12px;justify-content:flex-start;text-align:left}.hero-proof strong{font-size:15px;white-space:normal}.hero-proof span{font-size:10px;white-space:normal}.hero-proof .proof-mark-gaf{width:66px;height:66px}.hero-proof-left,.hero-proof-right{grid-column:1;grid-row:auto;margin-top:-8px}.hero-proof-right{justify-content:flex-start;text-align:left;margin-top:-6px}.hero-proof-right strong{font-size:16px}}
 
     /* Premium mega-menu hover refresh */
     .mega{border-color:rgba(14,36,62,.14);box-shadow:0 30px 80px rgba(5,10,22,.30)}
@@ -1626,51 +1624,53 @@
           <h1>Charlotte Roofing, <span class="hero-accent">Storm Damage</span> &amp; Repair Experts</h1>
           <p class="hero-copy">Roof-M-All helps homeowners with roof repairs, replacements, storm-damage support, siding, gutters, and commercial roofing. <span class="hero-copy-underline">Get a FREE Estimate</span> without the runaround.</p>
           <div class="hero-ctas"><a class="btn btn-primary" href="#estimate" data-track-event="cta_estimate_click" data-track-location="hero">Get My FREE Roof Estimate</a><a class="btn btn-ghost" href="tel:7045209299" data-track-event="cta_call_click" data-track-location="hero">Call 704-520-9299</a></div>
-          <div class="hero-proof hero-proof-left" aria-label="Roof-M-All GAF certification">
-            <img class="proof-mark proof-mark-gaf" src="assets/gaf-master-elite-transparent.png" alt="GAF Master Elite Residential Roofing Contractor badge">
-            <p><strong>GAF Master Elite</strong><span>Certified Installer</span></p>
-          </div>
           <div class="calculator-text-row"><a class="calculator-text-link" href="#home-calculator" data-track-event="calculator_home_scroll_click" data-track-location="hero_text_link" aria-label="Curious about cost? Try our project calculator here."><img class="calculator-highlight-img" src="assets/calculator-highlight-scott.jpg" alt="Curious about cost? Try our project calculator here." width="1280" height="98"><span class="calculator-mobile-text" aria-hidden="true">Curious about cost? <span class="calculator-mobile-underline">Try our project calculator here</span>.</span></a></div>
         </div>
 
-        <aside class="estimate-card" id="estimate">
-          <h2><span class="form-heading-desktop">Get A Fast, FREE Estimate Now</span><span class="form-heading-mobile">Get A Fast, FREE Estimate</span></h2>
-          <p>At Roof-M-All—we handle roof repairs, roof replacement, storm damage, insurance claims, siding, gutters &amp; commercial roofing.</p>
-          <form class="form" data-lead-form>
-            <div class="form-inner">
-              <select name="service_needed" aria-label="Select service" required><option value="">Select service*</option><option>Roof repair / leak</option><option>Roof replacement</option><option>Storm damage</option><option>Commercial roofing</option><option>Siding</option><option>Gutters</option></select>
-              <input name="service_address" autocomplete="street-address" aria-label="Property address" placeholder="Property address*" required>
-              <div class="row">
-                <input name="name" autocomplete="name" aria-label="Full name" placeholder="Full name*" required>
-                <input name="email" autocomplete="email" inputmode="email" aria-label="Email address" placeholder="Email address*">
+        <div class="hero-form-column">
+          <aside class="estimate-card" id="estimate">
+            <h2><span class="form-heading-desktop">Get A Fast, FREE Estimate Now</span><span class="form-heading-mobile">Get A Fast, FREE Estimate</span></h2>
+            <p>At Roof-M-All—we handle roof repairs, roof replacement, storm damage, insurance claims, siding, gutters &amp; commercial roofing.</p>
+            <form class="form" data-lead-form>
+              <div class="form-inner">
+                <select name="service_needed" aria-label="Select service" required><option value="">Select service*</option><option>Roof repair / leak</option><option>Roof replacement</option><option>Storm damage</option><option>Commercial roofing</option><option>Siding</option><option>Gutters</option></select>
+                <input name="service_address" autocomplete="street-address" aria-label="Property address" placeholder="Property address*" required>
+                <div class="row">
+                  <input name="name" autocomplete="name" aria-label="Full name" placeholder="Full name*" required>
+                  <input name="email" autocomplete="email" inputmode="email" aria-label="Email address" placeholder="Email address*">
+                </div>
+                <input name="phone" autocomplete="tel" inputmode="tel" aria-label="Phone number" placeholder="Phone number*" required>
+                <input type="hidden" name="lead_source" value="website">
+                <input type="hidden" name="page_url" data-attribution-field="page_url">
+                <input type="hidden" name="referrer" data-attribution-field="referrer">
+                <input type="hidden" name="utm_source" data-attribution-field="utm_source">
+                <input type="hidden" name="utm_medium" data-attribution-field="utm_medium">
+                <input type="hidden" name="utm_campaign" data-attribution-field="utm_campaign">
+                <input type="hidden" name="utm_term" data-attribution-field="utm_term">
+                <input type="hidden" name="utm_content" data-attribution-field="utm_content">
+                <label class="consent-row">
+                  <input type="checkbox" name="consent" required>
+                  <span>By checking, you authorize Roof-M-All to reach out to you via text for information about appointment setting and any other project needs. We will never share your personal information with third parties for marketing purposes. Messaging rates vary based on your project needs. You can opt out at any time. Message/data rates apply. Consent is not a condition of purchase. All advertised offers are subject to financing approval.<br><a href="terms-conditions.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> | <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span>
+                </label>
+                <button class="btn btn-primary" type="submit" data-track-event="lead_form_submit" data-track-location="hero_form">Get A FREE Estimate</button>
               </div>
-              <input name="phone" autocomplete="tel" inputmode="tel" aria-label="Phone number" placeholder="Phone number*" required>
-              <input type="hidden" name="lead_source" value="website">
-              <input type="hidden" name="page_url" data-attribution-field="page_url">
-              <input type="hidden" name="referrer" data-attribution-field="referrer">
-              <input type="hidden" name="utm_source" data-attribution-field="utm_source">
-              <input type="hidden" name="utm_medium" data-attribution-field="utm_medium">
-              <input type="hidden" name="utm_campaign" data-attribution-field="utm_campaign">
-              <input type="hidden" name="utm_term" data-attribution-field="utm_term">
-              <input type="hidden" name="utm_content" data-attribution-field="utm_content">
-              <label class="consent-row">
-                <input type="checkbox" name="consent" required>
-                <span>By checking, you authorize Roof-M-All to reach out to you via text for information about appointment setting and any other project needs. We will never share your personal information with third parties for marketing purposes. Messaging rates vary based on your project needs. You can opt out at any time. Message/data rates apply. Consent is not a condition of purchase. All advertised offers are subject to financing approval.<br><a href="terms-conditions.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> | <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span>
-              </label>
-              <button class="btn btn-primary" type="submit" data-track-event="lead_form_submit" data-track-location="hero_form">Get A FREE Estimate</button>
-            </div>
-            <div class="form-trust-row" aria-label="Roof-M-All third-party ratings">
-              <div class="trust-rating"><span class="trust-google" aria-hidden="true">G</span><div class="trust-copy"><span class="trust-stars">★★★★★</span><span class="trust-score">4.8 Rating</span></div></div>
-              <div class="trust-rating"><img class="trust-logo" src="assets/facebook-logo.jpg" alt="Facebook logo"><div class="trust-copy"><span class="trust-stars">★★★★★</span><span class="trust-score">5.0 Rating</span></div></div>
-              <div class="trust-rating"><img class="trust-logo" src="assets/bbb-logo.jpg" alt="BBB logo"><div class="trust-copy"><span class="trust-score">Rated A+</span><span class="trust-score">Trusted</span></div></div>
-            </div>
-            <div class="privacy" id="form-status" role="status" aria-live="polite"></div>
-          </form>
-          <div class="hero-proof hero-proof-right" aria-label="Roof-M-All homeowners helped">
-            <img class="proof-mark proof-mark-check" src="assets/roof-checkmark-transparent.png" alt="Green check mark icon">
-            <p><strong>4,811+ Homeowners</strong><span>Helped Across NC &amp; SC</span></p>
-          </div>
-        </aside>
+              <div class="form-trust-row" aria-label="Roof-M-All third-party ratings">
+                <div class="trust-rating"><span class="trust-google" aria-hidden="true">G</span><div class="trust-copy"><span class="trust-stars">★★★★★</span><span class="trust-score">4.8 Rating</span></div></div>
+                <div class="trust-rating"><img class="trust-logo" src="assets/facebook-logo.jpg" alt="Facebook logo"><div class="trust-copy"><span class="trust-stars">★★★★★</span><span class="trust-score">5.0 Rating</span></div></div>
+                <div class="trust-rating"><img class="trust-logo" src="assets/bbb-logo.jpg" alt="BBB logo"><div class="trust-copy"><span class="trust-score">Rated A+</span><span class="trust-score">Trusted</span></div></div>
+              </div>
+              <div class="privacy" id="form-status" role="status" aria-live="polite"></div>
+            </form>
+          </aside>
+        </div>
+
+        <div class="hero-proof hero-proof-left" aria-label="Roof-M-All GAF certification">
+          <img class="proof-mark proof-mark-gaf" src="assets/gaf-master-elite-transparent.png" alt="GAF Master Elite Residential Roofing Contractor badge">
+          <p><strong>GAF Master Elite</strong><span>Certified Installer</span></p>
+        </div>
+        <div class="hero-proof hero-proof-right" aria-label="Roof-M-All homeowners helped">
+          <p><strong>4,811+ Homeowners</strong><span>Helped Across NC &amp; SC</span></p>
+        </div>
       </div>
     </section>
 
