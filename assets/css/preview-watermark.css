@@ -1,0 +1,19 @@
+/* Evergreen-matched preview watermark for all public Roof-M-All pages. */
+body:not([data-no-preview-watermark])::before {
+  content: "A.G. Creative Preview";
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 9999;
+  transform: translate(-50%, -50%) rotate(-28deg);
+  width: 150vw;
+  text-align: center;
+  color: rgba(255, 255, 255, .20);
+  font-size: clamp(34px, 7vw, 96px);
+  font-weight: 950;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, .34);
+  pointer-events: none;
+  white-space: nowrap;
+}

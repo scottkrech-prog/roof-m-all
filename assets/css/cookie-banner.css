@@ -1,4 +1,5 @@
-/* Roof-M-All cookie notice */
+/* Shared page overlays: cookie notice and site preview watermark. */
+@import url("./preview-watermark.css?v=evergreen-watermark");
 .cookie-banner{position:fixed;left:50%;bottom:24px;z-index:120;display:none;width:min(1120px,calc(100vw - 40px));transform:translateX(-50%);background:#fff;color:#172033;border:1px solid #dfe5ef;border-radius:22px;box-shadow:0 22px 70px rgba(13,16,32,.22);font-family:"Plus Jakarta Sans",Arial,sans-serif}
 .cookie-banner.is-visible{display:block}
 .cookie-banner__inner{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:18px 20px 18px 22px}
