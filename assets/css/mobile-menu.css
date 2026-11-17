@@ -6,10 +6,40 @@ body:not([data-no-preview-watermark]) .mobile-menu-btn {
   border: 0;
   border-radius: 0;
   box-shadow: none;
+  position: relative;
   width: 48px;
   height: 48px;
-  font-size: 30px;
-  line-height: 1;
+  padding: 0;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+}
+body:not([data-no-preview-watermark]) .mobile-menu-btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 -12px 0 #fff, 0 12px 0 #fff;
+  pointer-events: none;
+}
+body:not([data-no-preview-watermark]) .mobile-menu-btn[aria-expanded="true"]::before {
+  box-shadow: none;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+body:not([data-no-preview-watermark]) .mobile-menu-btn[aria-expanded="true"]::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  pointer-events: none;
 }
 body:not([data-no-preview-watermark]) .mobile-menu-btn:hover,
 body:not([data-no-preview-watermark]) .mobile-menu-btn:active {
