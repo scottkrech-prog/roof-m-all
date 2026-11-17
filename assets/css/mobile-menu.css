@@ -1,0 +1,19 @@
+/* Match the Allstate preview's flat hamburger control; preserve the RMA nav palette. */
+body:not([data-no-preview-watermark]) .mobile-menu-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+body:not([data-no-preview-watermark]) .mobile-menu-btn:hover,
+body:not([data-no-preview-watermark]) .mobile-menu-btn:active {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+body:not([data-no-preview-watermark]) .mobile-menu-btn:focus-visible {
+  outline: 2px solid #8fb5ff;
+  outline-offset: 3px;
+}
