@@ -6,6 +6,10 @@ body:not([data-no-preview-watermark]) .mobile-menu-btn {
   border: 0;
   border-radius: 0;
   box-shadow: none;
+  width: 48px;
+  height: 48px;
+  font-size: 30px;
+  line-height: 1;
 }
 body:not([data-no-preview-watermark]) .mobile-menu-btn:hover,
 body:not([data-no-preview-watermark]) .mobile-menu-btn:active {
