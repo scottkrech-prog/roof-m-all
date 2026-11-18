@@ -21,9 +21,9 @@ body:not([data-no-preview-watermark]) .mobile-menu-btn::before {
   top: 50%;
   width: 25px;
   height: 2px;
-  background: #fff;
+  background: #10263d;
   transform: translate(-50%, -50%);
-  box-shadow: 0 -12px 0 #fff, 0 12px 0 #fff;
+  box-shadow: 0 -12px 0 #10263d, 0 12px 0 #10263d;
   pointer-events: none;
 }
 body:not([data-no-preview-watermark]) .mobile-menu-btn[aria-expanded="true"]::before {
@@ -37,7 +37,7 @@ body:not([data-no-preview-watermark]) .mobile-menu-btn[aria-expanded="true"]::af
   top: 50%;
   width: 25px;
   height: 2px;
-  background: #fff;
+  background: #10263d;
   transform: translate(-50%, -50%) rotate(-45deg);
   pointer-events: none;
 }
@@ -48,6 +48,6 @@ body:not([data-no-preview-watermark]) .mobile-menu-btn:active {
   box-shadow: none;
 }
 body:not([data-no-preview-watermark]) .mobile-menu-btn:focus-visible {
-  outline: 2px solid #8fb5ff;
+  outline: 2px solid #2878f1;
   outline-offset: 3px;
 }
