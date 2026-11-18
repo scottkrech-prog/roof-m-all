@@ -1,45 +1,21 @@
-/* Match the Allstate preview's flat hamburger control; preserve the RMA nav palette. */
+/* Keep RMA's native hamburger glyph and geometry; flatten only the button surface. */
 body:not([data-no-preview-watermark]) .mobile-menu-btn {
   -webkit-appearance: none;
   appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: #172033;
+  font-size: 22px;
+  line-height: 1;
   background: transparent;
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  position: relative;
-  width: 48px;
-  height: 48px;
-  padding: 0;
-  color: transparent;
-  font-size: 0;
-  line-height: 0;
-}
-body:not([data-no-preview-watermark]) .mobile-menu-btn::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 25px;
-  height: 2px;
-  background: #10263d;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 -12px 0 #10263d, 0 12px 0 #10263d;
-  pointer-events: none;
-}
-body:not([data-no-preview-watermark]) .mobile-menu-btn[aria-expanded="true"]::before {
-  box-shadow: none;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-body:not([data-no-preview-watermark]) .mobile-menu-btn[aria-expanded="true"]::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 25px;
-  height: 2px;
-  background: #10263d;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  pointer-events: none;
+  cursor: pointer;
 }
 body:not([data-no-preview-watermark]) .mobile-menu-btn:hover,
 body:not([data-no-preview-watermark]) .mobile-menu-btn:active {
