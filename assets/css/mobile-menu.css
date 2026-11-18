@@ -1,21 +1,48 @@
-/* Keep RMA's native hamburger glyph and geometry; flatten only the button surface. */
+/* Match Allstate's mobile mark: 25x2px bars with 5px margins (7px center gaps). */
 body:not([data-no-preview-watermark]) .mobile-menu-btn {
   -webkit-appearance: none;
   appearance: none;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
   padding: 0;
-  color: #172033;
-  font-size: 22px;
-  line-height: 1;
+  position: relative;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
   background: transparent;
   border: 0;
   border-radius: 0;
   box-shadow: none;
   cursor: pointer;
+}
+body:not([data-no-preview-watermark]) .mobile-menu-btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 25px;
+  height: 2px;
+  background: #10263d;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 -7px 0 #10263d, 0 7px 0 #10263d;
+  pointer-events: none;
+}
+body:not([data-no-preview-watermark]) .mobile-menu-btn[aria-expanded="true"]::before {
+  box-shadow: none;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+body:not([data-no-preview-watermark]) .mobile-menu-btn[aria-expanded="true"]::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 25px;
+  height: 2px;
+  background: #10263d;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  pointer-events: none;
 }
 body:not([data-no-preview-watermark]) .mobile-menu-btn:hover,
 body:not([data-no-preview-watermark]) .mobile-menu-btn:active {
